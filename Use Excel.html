@@ -1,136 +1,161 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="my">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Thein Family</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Report view Excel - Thein Family</title>
+<style>
+:root{--bg:#f4f6f3;--card:#fff;--ink:#17251d;--mute:#5d6b63;--line:#d9e0da;--brand:#1d5b3a;--brand-ink:#fff;--chip:#e8f0ea;--chip-h:#d3e5d8;--cust:#b3261e;--cust-bg:#fbeceb;--cust-h:#f5d4d1}
+@media(prefers-color-scheme:dark){:root{--bg:#0f1713;--card:#17231c;--ink:#e6efe9;--mute:#98a89e;--line:#2a3a31;--brand:#164a2f;--chip:#22352a;--chip-h:#2d4637;--cust:#ff9a92;--cust-bg:#3a1f1d;--cust-h:#4d2927}}
+*{box-sizing:border-box}
+html{scroll-padding-top:5rem}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.5 "Noto Sans Myanmar","Myanmar Text","Padauk",system-ui,-apple-system,"Segoe UI",sans-serif}
+header{background:var(--brand);color:var(--brand-ink);padding:.75rem 1rem;position:sticky;top:0;z-index:10;display:flex;flex-wrap:wrap;align-items:center;gap:.75rem 1rem}
+header img{height:44px;width:auto;border-radius:4px;display:block}
+.tools{display:flex;gap:.5rem;align-items:center}
+.grow{flex:1;min-width:200px}
+#q{width:100%;padding:.55rem .8rem;border:0;border-radius:8px;font:inherit;background:#fff;color:#17251d}
+main{max-width:1100px;margin:0 auto;padding:1rem}
+section{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:.9rem 1rem 1rem;margin-bottom:.9rem}
+section.cust{border-color:var(--cust)}
+h2{margin:0 0 .6rem;font-size:1.05rem;font-weight:600}
+section.cust h2{color:var(--cust)}
+.links{display:flex;flex-wrap:wrap;gap:.45rem}
+.links a{display:inline-block;padding:.4rem .75rem;border-radius:8px;background:var(--chip);color:var(--ink);text-decoration:none;font-size:.95rem}
+.links a:hover{background:var(--chip-h)}
+section.cust .links a{background:var(--cust-bg);color:var(--cust)}
+section.cust .links a:hover{background:var(--cust-h)}
+a:focus-visible,button:focus-visible,input:focus-visible{outline:3px solid #f2b705;outline-offset:2px}
+.copy-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:.6rem}
+.copy-item label{display:block;font-size:.85rem;color:var(--mute);margin-bottom:.2rem}
+.copy-row{display:flex;gap:.35rem}
+.copy-row input{flex:1;min-width:0;padding:.4rem .5rem;border:1px solid var(--line);border-radius:6px;background:var(--bg);color:var(--ink);font:.85rem ui-monospace,Consolas,monospace}
+.copy-row button{padding:.4rem .8rem;border:0;border-radius:6px;background:var(--brand);color:#fff;font:inherit;font-size:.9rem;cursor:pointer;min-width:4.6rem}
+.copy-row button.done{background:#2e7d32}
+#empty{display:none;text-align:center;color:var(--mute);padding:2rem 0}
+@media(max-width:520px){main{padding:.6rem}header img{height:38px}}
+.home{color:#fff;text-decoration:none;padding:.4rem .8rem;border-radius:8px;background:rgba(255,255,255,.18);font-size:.95rem}
+.home:hover{background:rgba(255,255,255,.3)}
+.sub{margin:.8rem 0 .4rem;font-size:.9rem;font-weight:600;color:var(--mute)}
+.grp:first-of-type .sub{margin-top:.1rem}
+</style>
 </head>
-
 <body>
-  <div class="container-fluid">
-  <div class="p-2 mb-2 bg-success text-white">
-    <div class="container-fluid">
-      <a href="index.html"><img src="Thein Logo.jpg" b  width="180" height="50"></a>
-      <h3>Report view Excel</h3>
-        <ul class="nav">
-            
-            <li class="nav-item " >
-                <a type="button" class="btn btn-primary " href="https://docs.google.com/spreadsheets/d/1t5a4cvuUyBeL2m1r6pvQJBuQc2Im1dKi8vlW6tGWkzA/edit?usp=sharing" >Last Day Monthly List</a>
-                <a type="button" class="btn btn-primary " href="https://docs.google.com/spreadsheets/d/1TKluzbI47nnxbWWlFs3q0diYDpijH87xJLn206GJGAA/edit?usp=sharing" >Accessories And Tax Order</a>
-                <a type="button" class="btn btn-primary " href="https://docs.google.com/spreadsheets/d/171WKbWF8GOnNKq8DzrGlpI9yFqITd1Nnj97eWVQtvZ8/edit?usp=sharing" >Accessorice And Tax Correction</a>
-                <a type="button" class="btn btn-primary " href="https://docs.google.com/spreadsheets/d/1flQOXNH7_8mr0EmksZqI_SM2ya4E4FytyMnJN9Gufn8/edit?usp=sharing" >Stamp Record</a><br>
-               <br> <a type="button" class="btn btn-primary " href="https://docs.google.com/spreadsheets/d/1SMBHoT4Vx8FGKu0x73vfDry3yOWkKtJ4PvOdUGPiwOk/edit?usp=sharing" >No Access</a>
-               <a type="button" class="btn btn-primary " href="https://docs.google.com/spreadsheets/d/1fAHSqRuiFni0xm7aNStlEqNF-bUv3jJyvUW0a5bgjTI/edit?usp=sharing" >Customer Name Change</a>
-               <a type="button" class="btn btn-primary " href="https://docs.google.com/spreadsheets/d/1KR4sVWmZ0EpbYtwZitdloasB9TtXg_PF2Ub_HwvWnJ8/edit?usp=sharing" >Arrival Time</a>
-               <a type="button" class="btn btn-primary " href="https://docs.google.com/spreadsheets/d/1Ki_FPOc3KOoqDSkABzvsMbd0XhJFL00G9EDItD5mL3k/edit?usp=sharing" >Buy STB Customer List</a>
-               <a type="button" class="btn btn-primary " href="https://docs.google.com/spreadsheets/d/1_CUQAVvpofd_3gYfOIw1vaMDlxBLFHHiGVQ92qAmGkg/edit#gid=2099062208" >Installation Fee</a><br>
-               <br> <a type="button" class="btn btn-primary " href="https://docs.google.com/spreadsheets/d/1OQaERAU2O1qaFSUY7a3_TdPZ1bIav63FXOr4IF5vUCo/edit?usp=sharing" >Record Voucher No</a>
-			   <a type="button" class="btn btn-primary " href="https://docs.google.com/spreadsheets/d/1Y04COIg2IEAbpDVg2Nl4DNZG3YSgHWur/edit?usp=sharing&ouid=100449871064544731319&rtpof=true&sd=true" >Shop Online Remain Transaction Id</a>
-			   <a type="button" class="btn btn-primary " href="https://drive.google.com/file/d/1iQVnMGuiHHO072YJNg8HrXq2kJN4s-W5/view?usp=sharing" target="_blank">SkyNet STB Aera Label</a>
-			   <a type="button" class="btn btn-primary " href="https://docs.google.com/spreadsheets/d/18FpbshbTJ9RT6Dzpgd_3-jmIplLZslPT3xq0Uet5A-g/edit?usp=sharing" target="_blank">Repair STB Recive Voucher</a>
-              
-			       <h3>Installer Excel List</h3>
-        <ul class="nav">
-            
-            <li class="nav-item " >
-                <a type="button" class="btn btn-primary " href="https://docs.google.com/spreadsheets/d/1U1dsvtu2Z4ptPv1rIJsitDN1pvJBRUFZlO2UmXPIz_M/edit?usp=sharing" >Installation Fee Total</a>
-               <h3>A5 Daily Excel</h3>
-        <ul class="nav">
-            
-            <li class="nav-item " >
-                <a type="button" class="btn btn-primary " href="https://docs.google.com/spreadsheets/d/124LF-N94ZkZrmL1uUawpaeD9rrr9A_pxYHj_Hq5pwxg/edit?usp=sharing" >PMA</a>
-                <a type="button" class="btn btn-primary " href="https://docs.google.com/spreadsheets/d/1LMY9RXOi82NNIM6H-u37HBPIn3RAaN4bXdVTKANXyrI/edit?usp=sharing" >Zabu</a>
-                <a type="button" class="btn btn-primary " href="https://docs.google.com/spreadsheets/d/11M_BhkwA1an_KkuWV8cEjvntR78dW-lKMPzGhUbSpm4/edit?usp=sharing" >Dakena</a>
-              <!-- <a type="button" class="btn btn-primary " href="https://docs.google.com/spreadsheets/d/1-rX8lLdRrR0aYA3Aj4Nhuwv2BZAV443pTTEh9wbRdeY/edit?usp=sharing" >Pokepa</a> -->
-               <a type="button" class="btn btn-primary " href="https://docs.google.com/spreadsheets/d/1-RqtLEZ9dnE1g8Jerz2T7nE53E8opUWCxFlKjX-zebE/edit?usp=sharing" >Lalway</a>
-               <a type="button" class="btn btn-primary " href="https://docs.google.com/spreadsheets/d/12pnbzX7nmeeVPlWJ6F_OX_Ca8QEKfSkLAL11YXh8SAw/edit?usp=sharing" >Taungoo</a>
-			   <!-- <a type="button" class="btn btn-primary " href="https://docs.google.com/spreadsheets/d/1VOApZLIsbI6-KJpOBmJQPYdpqZj_y_qomQIf3TzSdJg/edit?usp=sharing" >Yaetarshal</a> --></br>
-			  
-			  <h3>Item Balance</h3>
-        <ul class="nav">
-            
-            <li class="nav-item " >
-                <a type="button" class="btn btn-primary " href="https://docs.google.com/spreadsheets/d/1ULc9H3u5-fCMxvidnA0x1Z7wJBkrOMJeW5OA9sWOOvE/edit?gid=495063219#gid=495063219" >PMA</a>
-                <a type="button" class="btn btn-primary " href="https://docs.google.com/spreadsheets/d/1ULc9H3u5-fCMxvidnA0x1Z7wJBkrOMJeW5OA9sWOOvE/edit?gid=1973461909#gid=1973461909" >Zabu</a>
-                <a type="button" class="btn btn-primary " href="https://docs.google.com/spreadsheets/d/1ULc9H3u5-fCMxvidnA0x1Z7wJBkrOMJeW5OA9sWOOvE/edit?gid=1053365618#gid=1053365618" >Dakena</a>
-              
-			  <a type="button" class="btn btn-primary " href="https://docs.google.com/spreadsheets/d/1ULc9H3u5-fCMxvidnA0x1Z7wJBkrOMJeW5OA9sWOOvE/edit?gid=1334480709#gid=1334480709" >Lalway</a>
-			  
-			  <a type="button" class="btn btn-primary " href="https://docs.google.com/spreadsheets/d/1ULc9H3u5-fCMxvidnA0x1Z7wJBkrOMJeW5OA9sWOOvE/edit?gid=266394586#gid=266394586" >Taungoo</a>
-			  <a type="button" class="btn btn-primary " href="https://docs.google.com/spreadsheets/d/1ULc9H3u5-fCMxvidnA0x1Z7wJBkrOMJeW5OA9sWOOvE/edit?gid=894094598#gid=894094598" >Installer</a>
-		
-               <!-- <h3>2022 A5 Daily Excel</h3>
-        <ul class="nav">
-            
-            <li class="nav-item " >
-                <a type="button" class="btn btn-primary " href="https://docs.google.com/spreadsheets/d/1SgZAHq3LfjeNFV0pKMINsdOAr__ak9wIk8XvMNiaCr8/edit?usp=sharing" >PMA</a>
-                <a type="button" class="btn btn-primary " href="https://docs.google.com/spreadsheets/d/1sVhYl_5TtnTkRiQZnJ5spy1UhCPI1TSe8UHN06sg6II/edit?usp=sharing" >Zabu</a>
-                <a type="button" class="btn btn-primary " href="https://docs.google.com/spreadsheets/d/1g9E7HtP9vsI846ZX_TsX0TDvrBthxqe4RXfSTHiiBvQ/edit?usp=sharing" >Dakena</a>
-              <a type="button" class="btn btn-primary " href="https://docs.google.com/spreadsheets/d/1xuPKCIfGDpKx0_fUMZytglGfd7PzTe671FZ9zhPsrps/edit?usp=sharing" >Pokepa</a>
-               <!-- <a type="button" class="btn btn-primary " href="https://docs.google.com/spreadsheets/d/1-PSRH2vkTznCiqNQISTJg_KT55yGpJJslPICTNSY4G0/edit?usp=sharing" >Lalway</a> -->
-               <!-- <a type="button" class="btn btn-primary " href="https://docs.google.com/spreadsheets/d/1PFmQY5SGbjdOFFUT_LGHNCPl4mGLugGW2XcREf4sd40/edit?usp=sharing" >Taungoo</a> -->
-
-            <h3>TSP / QSP </h3>
-            <a type="button" class="btn btn-primary " href="https://docs.google.com/spreadsheets/d/1uN51CLgzFOI19C6AVAfF3LeNyrdjog-NvQPMwD0ey2U/edit?usp=sharing" >Tapkone</a>
-            <a type="button" class="btn btn-primary " href="https://docs.google.com/spreadsheets/d/1nCM0szLwOrz0Dh1VQWIw3vykgEht7XCSIzpXAm0cjCY/edit?usp=sharing" >MMM</a>
-			<a type="button" class="btn btn-primary " href="https://docs.google.com/spreadsheets/d/11YVpUu0ZmqyKgsdTw5lYr3n00B9hQ3XV256XUA7ghNo/edit?usp=sharing" >Cho Tal Ei</a>
-			<a type="button" class="btn btn-primary " href="https://docs.google.com/spreadsheets/d/1YaV43_yKBsOuozXeGqA1oxjDK1KcR1ZX9m9g2s0OeNI/edit?usp=sharing" >Htantatin ဦးကောက်</a>
-			<a type="button" class="btn btn-primary " href="https://docs.google.com/spreadsheets/d/1eHuOKvT84zg5YmecqDGMKMh0LwIf-KnOwquZGiIFW2Y/edit?usp=sharing" >Myat Noe Eain</a>
-			<!-- <a type="button" class="btn btn-primary " href="https://docs.google.com/spreadsheets/d/1XpOOeDiN35lCECdWm6oMHpjIIh07nY-1XtI1nzca_8U/edit?usp=sharing" >Yoon Waddy Ngwe</a> -->
-               <h3>Shop Online A5 Daily Excel</h3>
-        <ul class="nav">
-            
-            <li class="nav-item " >
-                <a type="button" class="btn btn-primary " href="https://docs.google.com/spreadsheets/d/1KbIWgbw10cGWye_iLeXc_ZWJX-0ROWo1wdVbFjktvqc/edit?usp=sharing" >Wave Money</a>
-                <a type="button" class="btn btn-primary " href="https://docs.google.com/spreadsheets/d/1VmmWBxjumyx0SbYqbBCxerRlv1wrBfNkL47GSLPgZYE/edit?usp=sharing" >KBZ Pay</a>
-                <a type="button" class="btn btn-primary " href="https://docs.google.com/spreadsheets/d/1_B4yXjcHhA4akmVzATqvRiEb5n3-GsV0TqbNab249EA/edit?usp=sharing" >Cb Bank</a>
-                <a type="button" class="btn btn-primary " href="https://docs.google.com/spreadsheets/d/1vUa7NVpCxZTbjo9HoCmF8eJ_6mzTedh1HX4Ux8_Qfpw/edit?usp=sharing" >AYA Bank</a>
-                <a type="button" class="btn btn-primary " href="https://docs.google.com/spreadsheets/d/1jfN6smu56_bDgWvX6VZOIqujCb91gmwVYWXdpnIF1D8/edit?usp=sharing" >YOMA Bank</a>
-               <a type="button" class="btn btn-primary " href="https://docs.google.com/spreadsheets/d/1gj-7u-F9bPApZzdkfuluPIUdS1ehpJ8OVYPQ5Y4cds8/edit?usp=sharing" >UAB Bank</a>
-               <a type="button" class="btn btn-primary " href="https://docs.google.com/spreadsheets/d/1HfgMd41T6U3j5YKmacGqpMY3lmZEO1qA_L6UmlW6omw/edit?usp=sharing" >OK$</a>
-               <a type="button" class="btn btn-primary " href="https://docs.google.com/spreadsheets/d/1AkzO_Up5b_dJ1gEIfrdE2mDloC3ncAKPwRRbKG3fK1Q/edit?usp=sharing" >MAB Bank</a>
-               <a type="button" class="btn btn-primary " href="https://docs.google.com/spreadsheets/d/1lbsHIj9G1eGjHWXkuycalCa5OxuQyL3UbpQ2lAqf2KY/edit?usp=sharing" >AGD Bank</a>
-               <a type="button" class="btn btn-primary " href="https://docs.google.com/spreadsheets/d/1FzfgqDGpL0VZKru9vuc4QsFQwQR1RNcg5kKydqUN87o/edit?usp=sharing" >GTB Bank</a>
-               <a type="button" class="btn btn-primary " href="https://docs.google.com/spreadsheets/d/1NcSLcPer_KyLaer_7_6XHFgfq6pZiMWWIsFLPta1KEo/edit?usp=sharing" >M-Pitesan</a>
-               <a type="button" class="btn btn-primary " href="https://docs.google.com/spreadsheets/d/1PLq-MDZ3JQ7duaxILanA8IvrfxIw1zyVOA-GkP1YOyw/edit?usp=sharing" >Mytel Pay</a>
-			   
-			  <!--  <h3>Shop Online 2022 A5 Daily Excel</h3>
-        <ul class="nav">
-            
-            <li class="nav-item " >
-                <a type="button" class="btn btn-primary " href="https://docs.google.com/spreadsheets/d/1SrGQaQGo3d_MZc5WKh36ALydWCzj1moFoL5OxIENMY4/edit#gid=0" >Wave Money</a>
-                <a type="button" class="btn btn-primary " href="https://docs.google.com/spreadsheets/d/1SrGQaQGo3d_MZc5WKh36ALydWCzj1moFoL5OxIENMY4/edit#gid=1400701159" >KBZ Pay</a>
-                <a type="button" class="btn btn-primary " href="https://docs.google.com/spreadsheets/d/1SrGQaQGo3d_MZc5WKh36ALydWCzj1moFoL5OxIENMY4/edit#gid=1881378004" >Cb Bank</a>
-                <a type="button" class="btn btn-primary " href="https://docs.google.com/spreadsheets/d/1SrGQaQGo3d_MZc5WKh36ALydWCzj1moFoL5OxIENMY4/edit#gid=49071991" >AYA Bank</a>
-                <a type="button" class="btn btn-primary " href="https://docs.google.com/spreadsheets/d/1SrGQaQGo3d_MZc5WKh36ALydWCzj1moFoL5OxIENMY4/edit#gid=1876551968" >YOMA Bank</a>
-               <a type="button" class="btn btn-primary " href="https://docs.google.com/spreadsheets/d/1SrGQaQGo3d_MZc5WKh36ALydWCzj1moFoL5OxIENMY4/edit#gid=254397081" >UAB Bank</a>
-               <a type="button" class="btn btn-primary " href="https://docs.google.com/spreadsheets/d/1SrGQaQGo3d_MZc5WKh36ALydWCzj1moFoL5OxIENMY4/edit#gid=2114232892" >OK$</a>
-               <a type="button" class="btn btn-primary " href="https://docs.google.com/spreadsheets/d/1SrGQaQGo3d_MZc5WKh36ALydWCzj1moFoL5OxIENMY4/edit#gid=198402293" >MAB Bank</a>
-               <a type="button" class="btn btn-primary " href="https://docs.google.com/spreadsheets/d/1SrGQaQGo3d_MZc5WKh36ALydWCzj1moFoL5OxIENMY4/edit#gid=241958700" >AGD Bank</a>
-               <a type="button" class="btn btn-primary " href="https://docs.google.com/spreadsheets/d/1SrGQaQGo3d_MZc5WKh36ALydWCzj1moFoL5OxIENMY4/edit#gid=798052452" >GTB Bank</a>
-               <a type="button" class="btn btn-primary " href="https://docs.google.com/spreadsheets/d/1SrGQaQGo3d_MZc5WKh36ALydWCzj1moFoL5OxIENMY4/edit#gid=1130611652" >M-Pitesan</a>
-               <a type="button" class="btn btn-primary " href="https://docs.google.com/spreadsheets/d/1SrGQaQGo3d_MZc5WKh36ALydWCzj1moFoL5OxIENMY4/edit#gid=309340924" >Mytel Pay</a> -->
-
-               <h3>Wave Form</h3>
-               <ul class="nav">
-                   
-                   <li class="nav-item " >
-                       <a type="button" class="btn btn-primary " href="https://docs.google.com/spreadsheets/d/1rVYFSSLAM0JYj2bzUuduZuh0WmKcgPWJ1s2s_Fl_9xE/edit?usp=sharing" >PMA</a>
-                       <a type="button" class="btn btn-primary " href="https://docs.google.com/spreadsheets/d/1mAqoN2Rpkhy0hdSE6Fit6nH4CM004lF6YMSP20dGZos/edit?usp=sharing" >Zabu</a>
-                       <a type="button" class="btn btn-primary " href="https://docs.google.com/spreadsheets/d/19d74UX9YuG93tjDi3R7w9IZm-srELiAmuqCydXcakZw/edit?usp=sharing" >Dakena</a>
-                      <a type="button" class="btn btn-primary " href="https://docs.google.com/spreadsheets/d/11Qm629CoCXfuOeMFl_U5gsefoWDvfedV19tHD2RH3m4/edit?usp=sharing" >Pokepa</a>
-                      <a type="button" class="btn btn-primary " href="https://docs.google.com/spreadsheets/d/14YB45RxbE8j6YMac8JFtjvsEeywziPAWIB3VV5xozZg/edit?usp=sharing" >Lalway</a></br>
-                    </br> <a type="button" class="btn btn-primary " href="https://u.pcloud.link/publink/show?code=Wmd" >အကောင့်မရှိသူထံသို့ငွေလွဲခများ</a>
-
-                    
-                    
-       
-      </div>
-      </div>
-</div>
+<header>
+  <a href="index.html"><img src="Thein Logo.jpg" alt="Thein Family"></a>
+  <a class="home" href="index.html">Home</a>
+  <div class="grow"><input id="q" type="search" placeholder="Search links..." aria-label="Search links" autocomplete="off"></div>
+</header>
+<main>
+<section>
+<h2>Report view Excel</h2>
+<div class="grp">
+<div class="links">
+<a href="https://docs.google.com/spreadsheets/d/1t5a4cvuUyBeL2m1r6pvQJBuQc2Im1dKi8vlW6tGWkzA/edit?usp=sharing" target="_blank" rel="noopener">Last Day Monthly List</a>
+<a href="https://docs.google.com/spreadsheets/d/1TKluzbI47nnxbWWlFs3q0diYDpijH87xJLn206GJGAA/edit?usp=sharing" target="_blank" rel="noopener">Accessories And Tax Order</a>
+<a href="https://docs.google.com/spreadsheets/d/171WKbWF8GOnNKq8DzrGlpI9yFqITd1Nnj97eWVQtvZ8/edit?usp=sharing" target="_blank" rel="noopener">Accessories And Tax Correction</a>
+<a href="https://docs.google.com/spreadsheets/d/1flQOXNH7_8mr0EmksZqI_SM2ya4E4FytyMnJN9Gufn8/edit?usp=sharing" target="_blank" rel="noopener">Stamp Record</a>
+<a href="https://docs.google.com/spreadsheets/d/1SMBHoT4Vx8FGKu0x73vfDry3yOWkKtJ4PvOdUGPiwOk/edit?usp=sharing" target="_blank" rel="noopener">No Access</a>
+<a href="https://docs.google.com/spreadsheets/d/1fAHSqRuiFni0xm7aNStlEqNF-bUv3jJyvUW0a5bgjTI/edit?usp=sharing" target="_blank" rel="noopener">Customer Name Change</a>
+<a href="https://docs.google.com/spreadsheets/d/1KR4sVWmZ0EpbYtwZitdloasB9TtXg_PF2Ub_HwvWnJ8/edit?usp=sharing" target="_blank" rel="noopener">Arrival Time</a>
+<a href="https://docs.google.com/spreadsheets/d/1Ki_FPOc3KOoqDSkABzvsMbd0XhJFL00G9EDItD5mL3k/edit?usp=sharing" target="_blank" rel="noopener">Buy STB Customer List</a>
+<a href="https://docs.google.com/spreadsheets/d/1_CUQAVvpofd_3gYfOIw1vaMDlxBLFHHiGVQ92qAmGkg/edit#gid=2099062208" target="_blank" rel="noopener">Installation Fee</a>
+<a href="https://docs.google.com/spreadsheets/d/1OQaERAU2O1qaFSUY7a3_TdPZ1bIav63FXOr4IF5vUCo/edit?usp=sharing" target="_blank" rel="noopener">Record Voucher No</a>
+<a href="https://docs.google.com/spreadsheets/d/1Y04COIg2IEAbpDVg2Nl4DNZG3YSgHWur/edit?usp=sharing&amp;ouid=100449871064544731319&amp;rtpof=true&amp;sd=true" target="_blank" rel="noopener">Shop Online Remain Transaction Id</a>
+<a href="https://drive.google.com/file/d/1iQVnMGuiHHO072YJNg8HrXq2kJN4s-W5/view?usp=sharing" target="_blank" rel="noopener">SkyNet STB Area Label</a>
+<a href="https://docs.google.com/spreadsheets/d/18FpbshbTJ9RT6Dzpgd_3-jmIplLZslPT3xq0Uet5A-g/edit?usp=sharing" target="_blank" rel="noopener">Repair STB Receive Voucher</a>
+</div></div>
+</section>
+<section>
+<h2>Installer Excel List</h2>
+<div class="grp">
+<div class="links">
+<a href="https://docs.google.com/spreadsheets/d/1U1dsvtu2Z4ptPv1rIJsitDN1pvJBRUFZlO2UmXPIz_M/edit?usp=sharing" target="_blank" rel="noopener">Installation Fee Total</a>
+</div></div>
+</section>
+<section>
+<h2>A5 Daily Excel</h2>
+<div class="grp">
+<div class="links">
+<a href="https://docs.google.com/spreadsheets/d/124LF-N94ZkZrmL1uUawpaeD9rrr9A_pxYHj_Hq5pwxg/edit?usp=sharing" target="_blank" rel="noopener">PMA</a>
+<a href="https://docs.google.com/spreadsheets/d/1LMY9RXOi82NNIM6H-u37HBPIn3RAaN4bXdVTKANXyrI/edit?usp=sharing" target="_blank" rel="noopener">Zabu</a>
+<a href="https://docs.google.com/spreadsheets/d/11M_BhkwA1an_KkuWV8cEjvntR78dW-lKMPzGhUbSpm4/edit?usp=sharing" target="_blank" rel="noopener">Dakena</a>
+<a href="https://docs.google.com/spreadsheets/d/1-RqtLEZ9dnE1g8Jerz2T7nE53E8opUWCxFlKjX-zebE/edit?usp=sharing" target="_blank" rel="noopener">Lalway</a>
+<a href="https://docs.google.com/spreadsheets/d/12pnbzX7nmeeVPlWJ6F_OX_Ca8QEKfSkLAL11YXh8SAw/edit?usp=sharing" target="_blank" rel="noopener">Taungoo</a>
+</div></div>
+</section>
+<section>
+<h2>Item Balance</h2>
+<div class="grp">
+<div class="links">
+<a href="https://docs.google.com/spreadsheets/d/1ULc9H3u5-fCMxvidnA0x1Z7wJBkrOMJeW5OA9sWOOvE/edit?gid=495063219#gid=495063219" target="_blank" rel="noopener">PMA</a>
+<a href="https://docs.google.com/spreadsheets/d/1ULc9H3u5-fCMxvidnA0x1Z7wJBkrOMJeW5OA9sWOOvE/edit?gid=1973461909#gid=1973461909" target="_blank" rel="noopener">Zabu</a>
+<a href="https://docs.google.com/spreadsheets/d/1ULc9H3u5-fCMxvidnA0x1Z7wJBkrOMJeW5OA9sWOOvE/edit?gid=1053365618#gid=1053365618" target="_blank" rel="noopener">Dakena</a>
+<a href="https://docs.google.com/spreadsheets/d/1ULc9H3u5-fCMxvidnA0x1Z7wJBkrOMJeW5OA9sWOOvE/edit?gid=1334480709#gid=1334480709" target="_blank" rel="noopener">Lalway</a>
+<a href="https://docs.google.com/spreadsheets/d/1ULc9H3u5-fCMxvidnA0x1Z7wJBkrOMJeW5OA9sWOOvE/edit?gid=266394586#gid=266394586" target="_blank" rel="noopener">Taungoo</a>
+<a href="https://docs.google.com/spreadsheets/d/1ULc9H3u5-fCMxvidnA0x1Z7wJBkrOMJeW5OA9sWOOvE/edit?gid=894094598#gid=894094598" target="_blank" rel="noopener">Installer</a>
+</div></div>
+</section>
+<section>
+<h2>TSP / QSP</h2>
+<div class="grp">
+<div class="links">
+<a href="https://docs.google.com/spreadsheets/d/1uN51CLgzFOI19C6AVAfF3LeNyrdjog-NvQPMwD0ey2U/edit?usp=sharing" target="_blank" rel="noopener">Tapkone</a>
+<a href="https://docs.google.com/spreadsheets/d/1nCM0szLwOrz0Dh1VQWIw3vykgEht7XCSIzpXAm0cjCY/edit?usp=sharing" target="_blank" rel="noopener">MMM</a>
+<a href="https://docs.google.com/spreadsheets/d/11YVpUu0ZmqyKgsdTw5lYr3n00B9hQ3XV256XUA7ghNo/edit?usp=sharing" target="_blank" rel="noopener">Cho Tal Ei</a>
+<a href="https://docs.google.com/spreadsheets/d/1YaV43_yKBsOuozXeGqA1oxjDK1KcR1ZX9m9g2s0OeNI/edit?usp=sharing" target="_blank" rel="noopener">Htantatin ဦးကောက်</a>
+<a href="https://docs.google.com/spreadsheets/d/1eHuOKvT84zg5YmecqDGMKMh0LwIf-KnOwquZGiIFW2Y/edit?usp=sharing" target="_blank" rel="noopener">Myat Noe Eain</a>
+</div></div>
+</section>
+<section>
+<h2>Shop Online A5 Daily Excel</h2>
+<div class="grp">
+<div class="links">
+<a href="https://docs.google.com/spreadsheets/d/1KbIWgbw10cGWye_iLeXc_ZWJX-0ROWo1wdVbFjktvqc/edit?usp=sharing" target="_blank" rel="noopener">Wave Money</a>
+<a href="https://docs.google.com/spreadsheets/d/1VmmWBxjumyx0SbYqbBCxerRlv1wrBfNkL47GSLPgZYE/edit?usp=sharing" target="_blank" rel="noopener">KBZ Pay</a>
+<a href="https://docs.google.com/spreadsheets/d/1_B4yXjcHhA4akmVzATqvRiEb5n3-GsV0TqbNab249EA/edit?usp=sharing" target="_blank" rel="noopener">Cb Bank</a>
+<a href="https://docs.google.com/spreadsheets/d/1vUa7NVpCxZTbjo9HoCmF8eJ_6mzTedh1HX4Ux8_Qfpw/edit?usp=sharing" target="_blank" rel="noopener">AYA Bank</a>
+<a href="https://docs.google.com/spreadsheets/d/1jfN6smu56_bDgWvX6VZOIqujCb91gmwVYWXdpnIF1D8/edit?usp=sharing" target="_blank" rel="noopener">YOMA Bank</a>
+<a href="https://docs.google.com/spreadsheets/d/1gj-7u-F9bPApZzdkfuluPIUdS1ehpJ8OVYPQ5Y4cds8/edit?usp=sharing" target="_blank" rel="noopener">UAB Bank</a>
+<a href="https://docs.google.com/spreadsheets/d/1HfgMd41T6U3j5YKmacGqpMY3lmZEO1qA_L6UmlW6omw/edit?usp=sharing" target="_blank" rel="noopener">OK$</a>
+<a href="https://docs.google.com/spreadsheets/d/1AkzO_Up5b_dJ1gEIfrdE2mDloC3ncAKPwRRbKG3fK1Q/edit?usp=sharing" target="_blank" rel="noopener">MAB Bank</a>
+<a href="https://docs.google.com/spreadsheets/d/1lbsHIj9G1eGjHWXkuycalCa5OxuQyL3UbpQ2lAqf2KY/edit?usp=sharing" target="_blank" rel="noopener">AGD Bank</a>
+<a href="https://docs.google.com/spreadsheets/d/1FzfgqDGpL0VZKru9vuc4QsFQwQR1RNcg5kKydqUN87o/edit?usp=sharing" target="_blank" rel="noopener">GTB Bank</a>
+<a href="https://docs.google.com/spreadsheets/d/1NcSLcPer_KyLaer_7_6XHFgfq6pZiMWWIsFLPta1KEo/edit?usp=sharing" target="_blank" rel="noopener">M-Pitesan</a>
+<a href="https://docs.google.com/spreadsheets/d/1PLq-MDZ3JQ7duaxILanA8IvrfxIw1zyVOA-GkP1YOyw/edit?usp=sharing" target="_blank" rel="noopener">Mytel Pay</a>
+</div></div>
+</section>
+<section>
+<h2>Wave Form</h2>
+<div class="grp">
+<div class="links">
+<a href="https://docs.google.com/spreadsheets/d/1rVYFSSLAM0JYj2bzUuduZuh0WmKcgPWJ1s2s_Fl_9xE/edit?usp=sharing" target="_blank" rel="noopener">PMA</a>
+<a href="https://docs.google.com/spreadsheets/d/1mAqoN2Rpkhy0hdSE6Fit6nH4CM004lF6YMSP20dGZos/edit?usp=sharing" target="_blank" rel="noopener">Zabu</a>
+<a href="https://docs.google.com/spreadsheets/d/19d74UX9YuG93tjDi3R7w9IZm-srELiAmuqCydXcakZw/edit?usp=sharing" target="_blank" rel="noopener">Dakena</a>
+<a href="https://docs.google.com/spreadsheets/d/11Qm629CoCXfuOeMFl_U5gsefoWDvfedV19tHD2RH3m4/edit?usp=sharing" target="_blank" rel="noopener">Pokepa</a>
+<a href="https://docs.google.com/spreadsheets/d/14YB45RxbE8j6YMac8JFtjvsEeywziPAWIB3VV5xozZg/edit?usp=sharing" target="_blank" rel="noopener">Lalway</a>
+<a href="https://u.pcloud.link/publink/show?code=Wmd" target="_blank" rel="noopener">အကောင့်မရှိသူထံသို့ငွေလွဲခများ</a>
+</div></div>
+</section>
+<p id="empty">No links match your search.</p>
+</main>
+<script>
+document.getElementById("q").addEventListener("input",function(){
+  var q=this.value.trim().toLowerCase(),shown=0;
+  document.querySelectorAll("main section").forEach(function(sec){
+    var th=(sec.querySelector("h2")||{textContent:""}).textContent.toLowerCase().indexOf(q)>-1,any=false;
+    sec.querySelectorAll(".grp").forEach(function(g){
+      var gany=false;
+      g.querySelectorAll(".links a").forEach(function(a){
+        var hit=!q||th||a.textContent.toLowerCase().indexOf(q)>-1;
+        a.style.display=hit?"":"none";if(hit)gany=true;
+      });
+      g.style.display=gany?"":"none";if(gany)any=true;
+    });
+    sec.style.display=any?"":"none";if(any)shown++;
+  });
+  document.getElementById("empty").style.display=shown?"none":"block";
+});
+</script>
 </body>
 </html>

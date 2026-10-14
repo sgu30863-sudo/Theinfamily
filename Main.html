@@ -1,87 +1,123 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="my">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Thein Family</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Main Lists - Thein Family</title>
+<style>
+:root{--bg:#f4f6f3;--card:#fff;--ink:#17251d;--mute:#5d6b63;--line:#d9e0da;--brand:#1d5b3a;--brand-ink:#fff;--chip:#e8f0ea;--chip-h:#d3e5d8;--cust:#b3261e;--cust-bg:#fbeceb;--cust-h:#f5d4d1}
+@media(prefers-color-scheme:dark){:root{--bg:#0f1713;--card:#17231c;--ink:#e6efe9;--mute:#98a89e;--line:#2a3a31;--brand:#164a2f;--chip:#22352a;--chip-h:#2d4637;--cust:#ff9a92;--cust-bg:#3a1f1d;--cust-h:#4d2927}}
+*{box-sizing:border-box}
+html{scroll-padding-top:5rem}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.5 "Noto Sans Myanmar","Myanmar Text","Padauk",system-ui,-apple-system,"Segoe UI",sans-serif}
+header{background:var(--brand);color:var(--brand-ink);padding:.75rem 1rem;position:sticky;top:0;z-index:10;display:flex;flex-wrap:wrap;align-items:center;gap:.75rem 1rem}
+header img{height:44px;width:auto;border-radius:4px;display:block}
+.tools{display:flex;gap:.5rem;align-items:center}
+.grow{flex:1;min-width:200px}
+#q{width:100%;padding:.55rem .8rem;border:0;border-radius:8px;font:inherit;background:#fff;color:#17251d}
+main{max-width:1100px;margin:0 auto;padding:1rem}
+section{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:.9rem 1rem 1rem;margin-bottom:.9rem}
+section.cust{border-color:var(--cust)}
+h2{margin:0 0 .6rem;font-size:1.05rem;font-weight:600}
+section.cust h2{color:var(--cust)}
+.links{display:flex;flex-wrap:wrap;gap:.45rem}
+.links a{display:inline-block;padding:.4rem .75rem;border-radius:8px;background:var(--chip);color:var(--ink);text-decoration:none;font-size:.95rem}
+.links a:hover{background:var(--chip-h)}
+section.cust .links a{background:var(--cust-bg);color:var(--cust)}
+section.cust .links a:hover{background:var(--cust-h)}
+a:focus-visible,button:focus-visible,input:focus-visible{outline:3px solid #f2b705;outline-offset:2px}
+.copy-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:.6rem}
+.copy-item label{display:block;font-size:.85rem;color:var(--mute);margin-bottom:.2rem}
+.copy-row{display:flex;gap:.35rem}
+.copy-row input{flex:1;min-width:0;padding:.4rem .5rem;border:1px solid var(--line);border-radius:6px;background:var(--bg);color:var(--ink);font:.85rem ui-monospace,Consolas,monospace}
+.copy-row button{padding:.4rem .8rem;border:0;border-radius:6px;background:var(--brand);color:#fff;font:inherit;font-size:.9rem;cursor:pointer;min-width:4.6rem}
+.copy-row button.done{background:#2e7d32}
+#empty{display:none;text-align:center;color:var(--mute);padding:2rem 0}
+@media(max-width:520px){main{padding:.6rem}header img{height:38px}}
+.home{color:#fff;text-decoration:none;padding:.4rem .8rem;border-radius:8px;background:rgba(255,255,255,.18);font-size:.95rem}
+.home:hover{background:rgba(255,255,255,.3)}
+.sub{margin:.8rem 0 .4rem;font-size:.9rem;font-weight:600;color:var(--mute)}
+.grp:first-of-type .sub{margin-top:.1rem}
+</style>
 </head>
-
 <body>
-  <div class="container-fluid">
-  <div class="p-2 mb-2 bg-success text-white">
-    <div class="container-fluid">
-      <a href="index.html"><img src="Thein Logo.jpg" b  width="180" height="50"></a>
-      <h3>Main Lists</h3>
-        <ul class="nav">
-            
-            <li class="nav-item " >
-                <a type="button" class="btn btn-primary " href="https://docs.google.com/spreadsheets/d/1-SyUP2Pa6D3Z449oN_YxcYTPcOyDMF6sPYO868SZUfk/edit?usp=sharing" >Main Out Come List</a>
-                <a type="button" class="btn btn-primary " href="https://docs.google.com/spreadsheets/d/1J4oopVMbOMMJdeIt1W0FV6Omq08G-OIpU8qhfluHlu0/edit?usp=sharing" >Main Income List</a>
-                <a type="button" class="btn btn-primary " href="https://docs.google.com/spreadsheets/d/1Itd1umDzwTmgRIFBQsiNEGaCfSi7XQQYRNXSo4-ikNw/edit?usp=sharing" >Wave amount</a>
-                <a type="button" class="btn btn-primary " href="https://docs.google.com/spreadsheets/d/1usPZvy3FY6_ylN-FiIJPGIC3-4gZ7tlE402cjowy8aw/edit?usp=sharing" >Bank List</a>
-				<a type="button" class="btn btn-primary " href="https://docs.google.com/spreadsheets/d/1L3gvXbL-VfXt-lxaaZyIUP6XOU_D4u4EHz-ep0sXomg/edit?usp=sharing" >Staff Error Cash</a>
-				<a type="button" class="btn btn-primary " href="https://drive.google.com/drive/folders/110eTQRyuOu8rvPMFWaub6tpv0tuS-Zg7?usp=sharing" >Drive</a>
-				<a type="button" class="btn btn-primary " href="https://drive.google.com/drive/folders/14Nsdtr8TNXJcG1qW3eXJgc6tk3hGm4XN?usp=sharing" target="_blank" >Soft</a>
-				<a type="button" class="btn btn-primary " href="http://u.pc.cd/8fGctalK" target="_blank" >all soft</a>
-                <a type="button" class="btn btn-primary " href="https://docs.google.com/spreadsheets/d/1EYIqX8gr1EFCRW5Jbdr-XQcKbFp7FxqKoIGBeOdwHDQ/edit?usp=sharing" target="_blank">%</a>
-             <h3>2022</h3>
-                 <ul class="nav">    
-                <a type="button" class="btn btn-primary " href="https://docs.google.com/spreadsheets/d/1puPwnar3bc8wpot3I-U5XwFGoaiurK_n2IBnmKJsvMs/edit?usp=sharing" target="_blank" >Main Out Come List</a>
-				
-				<a type="button" class="btn btn-primary " href="https://docs.google.com/spreadsheets/d/1IJE-u8N0COD0dak4lGlUMCru10e2pHyboiBN0vWPVYo/edit?usp=sharing" target="_blank">Main Income List</a>
-				<a type="button" class="btn btn-primary " href="https://docs.google.com/spreadsheets/d/1q8W2LSv5dG_wKu_k6hTU6ZRtN-cwclPXQNvCre3eyjE/edit?usp=sharing" target="_blank">Sky Net Deposit List</a>
-				<a type="button" class="btn btn-primary " href="https://docs.google.com/spreadsheets/d/1iXER9yQrlC0HJojbLUPMXfTkm2-ZaQH-v7yRMqyeJDs/edit?usp=sharing" target="_blank">Canal Plus Deposit List</a>
-				
-			
-				
-      </div>
-      </div>
-</div>
-
-<div class="container-fluid">
-  <div class="p-2 mb-2 bg-success text-white">
-    <div class="container-fluid">
-<h3>2023</h3>
-                 <ul class="nav"> 
-				<a type="button" class="btn btn-primary " href="https://docs.google.com/spreadsheets/d/1ZWdRw3ynXZSu8mRc71N54PIaaFN3xJWFQh4FHPTqgwo/edit?usp=sharing" target="_blank">Main Income List</a>
-                <a type="button" class="btn btn-primary " href="https://docs.google.com/spreadsheets/d/1DhiLoQvDJHbCYIGmtaZU9sU66zg11bsWOtJ411bi7-g/edit?usp=sharing" target="_blank" >Main Out Come List</a>
-				
-				
-				<a type="button" class="btn btn-primary " href="https://docs.google.com/spreadsheets/d/1t7FxsFszE6wodAAIpW-55x--8mcXIMZLqpyqiVXClbU/edit?usp=sharing" target="_blank">Sky Net Deposit List</a>
-</div>
-      </div>
-</div>
-
-<div class="container-fluid">
-  <div class="p-2 mb-2 bg-success text-white">
-    <div class="container-fluid">
-<h3>2024</h3>
-                 <ul class="nav"> 
-				<a type="button" class="btn btn-primary " href="https://docs.google.com/spreadsheets/d/1_mVtQmeJNGTnrZfjG4wkWAmtk1fc3OqoTLukSBqxZDQ/edit?usp=drive_link" target="_blank">Main Income List</a>
-                <a type="button" class="btn btn-primary " href="https://docs.google.com/spreadsheets/d/1vfY6xCnZVv8ARFxLky1-ogrvLWoCso9XXJ-cvVL4zOE/edit?usp=drive_link" target="_blank" >Main Out Come List</a>
-				
-				
-				<a type="button" class="btn btn-primary " href="https://docs.google.com/spreadsheets/d/14W_K8PxsHkBGVfhxT9QwYNlObFqakh15I6bznZnna6A/edit?usp=drive_link" target="_blank">Deposit List</a>
-</div>
-      </div>
-</div>
-
-<div class="container-fluid">
-  <div class="p-2 mb-2 bg-success text-white">
-    <div class="container-fluid">
-<h3>2025</h3>
-                 <ul class="nav"> 
-				<a type="button" class="btn btn-primary " href="https://docs.google.com/spreadsheets/d/12RnoOPvy08SD22AfvKz7AF6eo_VS_-aU6grSO3OHOC8/edit?usp=sharing" target="_blank">Main Income List</a>
-                <a type="button" class="btn btn-primary " href="https://docs.google.com/spreadsheets/d/1tGYvUclGCYnIh7QCkzh3fmIpjUZKjZPr3hTM6_s_BXw/edit?usp=sharing" target="_blank" >Main Out Come List</a>
-				
-				
-				<a type="button" class="btn btn-primary " href="https://docs.google.com/spreadsheets/d/1YeMbkNshHLKVixtnYsM1mIeqhqBtpEyw09kcURQ_5_8/edit?usp=sharing" target="_blank">Deposit List</a>
-</div>
-      </div>
-</div>
+<header>
+  <a href="index.html"><img src="Thein Logo.jpg" alt="Thein Family"></a>
+  <a class="home" href="index.html">Home</a>
+  <div class="grow"><input id="q" type="search" placeholder="Search links..." aria-label="Search links" autocomplete="off"></div>
+</header>
+<main>
+<section>
+<h2>Main Lists</h2>
+<div class="grp">
+<div class="links">
+<a href="https://docs.google.com/spreadsheets/d/1-SyUP2Pa6D3Z449oN_YxcYTPcOyDMF6sPYO868SZUfk/edit?usp=sharing" target="_blank" rel="noopener">Main Out Come List</a>
+<a href="https://docs.google.com/spreadsheets/d/1J4oopVMbOMMJdeIt1W0FV6Omq08G-OIpU8qhfluHlu0/edit?usp=sharing" target="_blank" rel="noopener">Main Income List</a>
+<a href="https://docs.google.com/spreadsheets/d/1Itd1umDzwTmgRIFBQsiNEGaCfSi7XQQYRNXSo4-ikNw/edit?usp=sharing" target="_blank" rel="noopener">Wave amount</a>
+<a href="https://docs.google.com/spreadsheets/d/1usPZvy3FY6_ylN-FiIJPGIC3-4gZ7tlE402cjowy8aw/edit?usp=sharing" target="_blank" rel="noopener">Bank List</a>
+<a href="https://docs.google.com/spreadsheets/d/1L3gvXbL-VfXt-lxaaZyIUP6XOU_D4u4EHz-ep0sXomg/edit?usp=sharing" target="_blank" rel="noopener">Staff Error Cash</a>
+<a href="https://drive.google.com/drive/folders/110eTQRyuOu8rvPMFWaub6tpv0tuS-Zg7?usp=sharing" target="_blank" rel="noopener">Drive</a>
+<a href="https://drive.google.com/drive/folders/14Nsdtr8TNXJcG1qW3eXJgc6tk3hGm4XN?usp=sharing" target="_blank" rel="noopener">Soft</a>
+<a href="http://u.pc.cd/8fGctalK" target="_blank" rel="noopener">all soft</a>
+<a href="https://docs.google.com/spreadsheets/d/1EYIqX8gr1EFCRW5Jbdr-XQcKbFp7FxqKoIGBeOdwHDQ/edit?usp=sharing" target="_blank" rel="noopener">%</a>
+</div></div>
+</section>
+<section>
+<h2>2022</h2>
+<div class="grp">
+<div class="links">
+<a href="https://docs.google.com/spreadsheets/d/1puPwnar3bc8wpot3I-U5XwFGoaiurK_n2IBnmKJsvMs/edit?usp=sharing" target="_blank" rel="noopener">Main Out Come List</a>
+<a href="https://docs.google.com/spreadsheets/d/1IJE-u8N0COD0dak4lGlUMCru10e2pHyboiBN0vWPVYo/edit?usp=sharing" target="_blank" rel="noopener">Main Income List</a>
+<a href="https://docs.google.com/spreadsheets/d/1q8W2LSv5dG_wKu_k6hTU6ZRtN-cwclPXQNvCre3eyjE/edit?usp=sharing" target="_blank" rel="noopener">Sky Net Deposit List</a>
+<a href="https://docs.google.com/spreadsheets/d/1iXER9yQrlC0HJojbLUPMXfTkm2-ZaQH-v7yRMqyeJDs/edit?usp=sharing" target="_blank" rel="noopener">Canal Plus Deposit List</a>
+</div></div>
+</section>
+<section>
+<h2>2023</h2>
+<div class="grp">
+<div class="links">
+<a href="https://docs.google.com/spreadsheets/d/1ZWdRw3ynXZSu8mRc71N54PIaaFN3xJWFQh4FHPTqgwo/edit?usp=sharing" target="_blank" rel="noopener">Main Income List</a>
+<a href="https://docs.google.com/spreadsheets/d/1DhiLoQvDJHbCYIGmtaZU9sU66zg11bsWOtJ411bi7-g/edit?usp=sharing" target="_blank" rel="noopener">Main Out Come List</a>
+<a href="https://docs.google.com/spreadsheets/d/1t7FxsFszE6wodAAIpW-55x--8mcXIMZLqpyqiVXClbU/edit?usp=sharing" target="_blank" rel="noopener">Sky Net Deposit List</a>
+</div></div>
+</section>
+<section>
+<h2>2024</h2>
+<div class="grp">
+<div class="links">
+<a href="https://docs.google.com/spreadsheets/d/1_mVtQmeJNGTnrZfjG4wkWAmtk1fc3OqoTLukSBqxZDQ/edit?usp=drive_link" target="_blank" rel="noopener">Main Income List</a>
+<a href="https://docs.google.com/spreadsheets/d/1vfY6xCnZVv8ARFxLky1-ogrvLWoCso9XXJ-cvVL4zOE/edit?usp=drive_link" target="_blank" rel="noopener">Main Out Come List</a>
+<a href="https://docs.google.com/spreadsheets/d/14W_K8PxsHkBGVfhxT9QwYNlObFqakh15I6bznZnna6A/edit?usp=drive_link" target="_blank" rel="noopener">Deposit List</a>
+</div></div>
+</section>
+<section>
+<h2>2025</h2>
+<div class="grp">
+<div class="links">
+<a href="https://docs.google.com/spreadsheets/d/12RnoOPvy08SD22AfvKz7AF6eo_VS_-aU6grSO3OHOC8/edit?usp=sharing" target="_blank" rel="noopener">Main Income List</a>
+<a href="https://docs.google.com/spreadsheets/d/1tGYvUclGCYnIh7QCkzh3fmIpjUZKjZPr3hTM6_s_BXw/edit?usp=sharing" target="_blank" rel="noopener">Main Out Come List</a>
+<a href="https://docs.google.com/spreadsheets/d/1YeMbkNshHLKVixtnYsM1mIeqhqBtpEyw09kcURQ_5_8/edit?usp=sharing" target="_blank" rel="noopener">Deposit List</a>
+</div></div>
+</section>
+<p id="empty">No links match your search.</p>
+</main>
+<script>
+document.getElementById("q").addEventListener("input",function(){
+  var q=this.value.trim().toLowerCase(),shown=0;
+  document.querySelectorAll("main section").forEach(function(sec){
+    var th=(sec.querySelector("h2")||{textContent:""}).textContent.toLowerCase().indexOf(q)>-1,any=false;
+    sec.querySelectorAll(".grp").forEach(function(g){
+      var gany=false;
+      g.querySelectorAll(".links a").forEach(function(a){
+        var hit=!q||th||a.textContent.toLowerCase().indexOf(q)>-1;
+        a.style.display=hit?"":"none";if(hit)gany=true;
+      });
+      g.style.display=gany?"":"none";if(gany)any=true;
+    });
+    sec.style.display=any?"":"none";if(any)shown++;
+  });
+  document.getElementById("empty").style.display=shown?"none":"block";
+});
+</script>
 </body>
 </html>

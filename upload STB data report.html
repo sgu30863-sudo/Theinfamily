@@ -1,328 +1,204 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="my">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Thein Family</title>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Daily STB Data Upload - Thein Family</title>
+<style>
+:root{--bg:#f4f6f3;--card:#fff;--ink:#17251d;--mute:#5d6b63;--line:#d9e0da;--brand:#1d5b3a;--brand-ink:#fff;--chip:#e8f0ea;--chip-h:#d3e5d8;--cust:#b3261e;--cust-bg:#fbeceb;--cust-h:#f5d4d1}
+@media(prefers-color-scheme:dark){:root{--bg:#0f1713;--card:#17231c;--ink:#e6efe9;--mute:#98a89e;--line:#2a3a31;--brand:#164a2f;--chip:#22352a;--chip-h:#2d4637;--cust:#ff9a92;--cust-bg:#3a1f1d;--cust-h:#4d2927}}
+*{box-sizing:border-box}
+html{scroll-padding-top:5rem}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.5 "Noto Sans Myanmar","Myanmar Text","Padauk",system-ui,-apple-system,"Segoe UI",sans-serif}
+header{background:var(--brand);color:var(--brand-ink);padding:.75rem 1rem;position:sticky;top:0;z-index:10;display:flex;flex-wrap:wrap;align-items:center;gap:.75rem 1rem}
+header img{height:44px;width:auto;border-radius:4px;display:block}
+.tools{display:flex;gap:.5rem;align-items:center}
+.grow{flex:1;min-width:200px}
+#q{width:100%;padding:.55rem .8rem;border:0;border-radius:8px;font:inherit;background:#fff;color:#17251d}
+main{max-width:1100px;margin:0 auto;padding:1rem}
+section{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:.9rem 1rem 1rem;margin-bottom:.9rem}
+section.cust{border-color:var(--cust)}
+h2{margin:0 0 .6rem;font-size:1.05rem;font-weight:600}
+section.cust h2{color:var(--cust)}
+.links{display:flex;flex-wrap:wrap;gap:.45rem}
+.links a{display:inline-block;padding:.4rem .75rem;border-radius:8px;background:var(--chip);color:var(--ink);text-decoration:none;font-size:.95rem}
+.links a:hover{background:var(--chip-h)}
+section.cust .links a{background:var(--cust-bg);color:var(--cust)}
+section.cust .links a:hover{background:var(--cust-h)}
+a:focus-visible,button:focus-visible,input:focus-visible{outline:3px solid #f2b705;outline-offset:2px}
+.copy-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:.6rem}
+.copy-item label{display:block;font-size:.85rem;color:var(--mute);margin-bottom:.2rem}
+.copy-row{display:flex;gap:.35rem}
+.copy-row input{flex:1;min-width:0;padding:.4rem .5rem;border:1px solid var(--line);border-radius:6px;background:var(--bg);color:var(--ink);font:.85rem ui-monospace,Consolas,monospace}
+.copy-row button{padding:.4rem .8rem;border:0;border-radius:6px;background:var(--brand);color:#fff;font:inherit;font-size:.9rem;cursor:pointer;min-width:4.6rem}
+.copy-row button.done{background:#2e7d32}
+#empty{display:none;text-align:center;color:var(--mute);padding:2rem 0}
+@media(max-width:520px){main{padding:.6rem}header img{height:38px}}
+.home{color:#fff;text-decoration:none;padding:.4rem .8rem;border-radius:8px;background:rgba(255,255,255,.18);font-size:.95rem}
+.home:hover{background:rgba(255,255,255,.3)}
+.sub{margin:.8rem 0 .4rem;font-size:.9rem;font-weight:600;color:var(--mute)}
+.grp:first-of-type .sub{margin-top:.1rem}
+</style>
 </head>
-
 <body>
-  <div class="container-fluid">
-    <div class="p-2 mb-2 bg-success text-white">
-      <div class="container-fluid">
-        <a href="index.html"><img src="Thein Logo.jpg" b width="180" height="50"></a>
-       
-
-            <h3>Daily STB Data Upload</h3>
-            <h5>1 Month</h5>
-            <ul class="nav">
-
-              <li class="nav-item ">
-                 <a type="button" class="btn btn-primary "
-                      href="https://drive.google.com/drive/folders/1Y1MVkQgEQS0-1HePOwMgCGeiWu3cz_Gh?usp=sharing" target="_blank">Dakena</a>
-                    
-					<a type="button" class="btn btn-primary "
-                      href="https://drive.google.com/drive/folders/1w8tb7hv64tyc5zZUDEZaCE4cKAmqCNkK?usp=sharing" target="_blank">Lalway</a>
-					  
-                    <a type="button" class="btn btn-primary "
-                      href="hhttps://drive.google.com/drive/folders/1XT9kPz_BFUlqNC3QEXlwjpOFaJVehoNk?usp=sharing" target="_blank">Kyaw Phyo Win</a>
-					  
-                    <a type="button" class="btn btn-primary "
-                      href="https://drive.google.com/drive/folders/1nn5Pt-enTBNOT0bmH2Zgc9t3nWllvVH5?usp=sharing" target="_blank">Store House Dakena</a>
-                    
-					
-                    <a type="button" class="btn btn-primary "
-                      href="https://drive.google.com/drive/folders/11ypPyUEcxwmq7ODyLbyDXzvaEmxmu82Q?usp=sharing" target="_blank">Zoon Hlaing</a>
-                    <a type="button" class="btn btn-primary "
-                      href="https://drive.google.com/drive/folders/1UtRu__EsTEaPaBY8TB9-fxc4dXz6BUUz?usp=sharing" target="_blank">Hein Min Zaw</a>
-					
-					<a type="button" class="btn btn-primary "
-                      href="https://drive.google.com/drive/folders/1GT0vDJbkEoGRe1oM8qPi56xNIX1yvUZG?usp=sharing" target="_blank">Kyaw Electronic-OL</a>
-                
-                <h5>2 Month</h5>
-                <ul class="nav">
-
-                  <li class="nav-item ">
-                 <a type="button" class="btn btn-primary "
-                      href="https://drive.google.com/drive/folders/1wQ98i22IC1X5Jc23QLS_qCHV7O2f7uhm?usp=sharing" target="_blank">Dakena</a>
-                    
-					<a type="button" class="btn btn-primary "
-                      href="https://drive.google.com/drive/folders/1e823V-Gv3aivbjJdA0vI7gghBHjvy8BI?usp=sharing" target="_blank">Lalway</a>
-					  
-                    <a type="button" class="btn btn-primary "
-                      href="https://drive.google.com/drive/folders/1m-kswck_fluf0QXmZH81vYWeCCBcXiN6?usp=sharing" target="_blank">Kyaw Phyo Win</a>
-					  
-                    <a type="button" class="btn btn-primary "
-                      href="https://drive.google.com/drive/folders/1LijOrS4fAuaexWuQwQI2c_UNNqinyhMN?usp=sharing" target="_blank">Store House Dakena</a>
-                    
-					
-                    <a type="button" class="btn btn-primary "
-                      href="https://drive.google.com/drive/folders/15nEflxc9Da7fRk-OxWtNxW2RtYBfvYHQ?usp=sharing" target="_blank">Zoon Hlaing</a>
-                    <a type="button" class="btn btn-primary "
-                      href="https://drive.google.com/drive/folders/176b88OS9s08wfDXM32KyypMCbPM68KAY?usp=sharing" target="_blank">Hein Min Zaw</a>
-					
-					<a type="button" class="btn btn-primary "
-                      href="https://drive.google.com/drive/folders/1qiPE-ImvYVxSlyVrtWoK4dMuVUgBc1EK?usp=sharing" target="_blank">Kyaw Electronic-OL</a>
-
-                    <h5>3 Month</h5>
-                    <ul class="nav">
-
-                      <li class="nav-item ">
-                   <a type="button" class="btn btn-primary "
-                      href="https://drive.google.com/drive/folders/10XX663SWsnh-0bK1P-hjvaDPn2fCFeTs?usp=sharing" target="_blank">Dakena</a>
-                    
-					<a type="button" class="btn btn-primary "
-                      href="https://drive.google.com/drive/folders/1AkZZmz0JjMqoQ5JFDPnCT6rixlJHb1HK?usp=sharing" target="_blank">Lalway</a>
-					  
-                    <a type="button" class="btn btn-primary "
-                      href="https://drive.google.com/drive/folders/1jN8AobpUPUq3QVXZ2OclREwHUSRmgTTn?usp=sharing" target="_blank">Kyaw Phyo Win</a>
-					  
-                    <a type="button" class="btn btn-primary "
-                      href="https://drive.google.com/drive/folders/1MU5rsFjPLdRUVXlbj-qyceLgpsM1qkgs?usp=sharing" target="_blank">Store House Dakena</a>
-                
-                    <a type="button" class="btn btn-primary "
-                      href="https://drive.google.com/drive/folders/1yy6FZGC5OK8jTPA21eU3mdPqkg5dPF-u?usp=sharing" target="_blank">Hein Min Zaw</a>
-					
-					<a type="button" class="btn btn-primary "
-                      href="https://drive.google.com/drive/folders/1rs8k3ac7m_SyQMgSBIR9TT2ch01EdJCb?usp=sharing" target="_blank">Kyaw Electronic-OL</a>  
-                    
-
-                        <h5>4 Month</h5>
-                        <ul class="nav">
-
-                          <li class="nav-item ">
-                        <a type="button" class="btn btn-primary "
-                      href="https://drive.google.com/drive/folders/1YmeAMrq89DzrM2FmVcMnYwkWvnuVNjzE?usp=sharing" target="_blank">PMA</a>
-                    
-                    <a type="button" class="btn btn-primary "
-                      href="https://drive.google.com/drive/folders/1OnbCKFZYgLquMW-gOoVzmUEW2hNT1ekR?usp=sharing" target="_blank">Dakena</a>
-                    
-					<a type="button" class="btn btn-primary "
-                      href="https://drive.google.com/drive/folders/1sFHSgQkLHu5P_Ej1rpJB4mi9VafwuYhF?usp=sharing" target="_blank">Lalway</a>
-                    <a type="button" class="btn btn-primary "
-                      href="https://drive.google.com/drive/folders/1ihRhmodLexOyRMGCqCQh0sf5_WTWYyMx?usp=sharing" target="_blank">Store House PMA</a>
-                    <a type="button" class="btn btn-primary "
-                      href="https://drive.google.com/drive/folders/1jOoaFIb7kYH1QDv9LzWt4kDHU-k59_NN?usp=sharing" target="_blank">Store House Dakena</a>
-                    
-					
-                    <a type="button" class="btn btn-primary "
-                      href="https://drive.google.com/drive/folders/1-MKxqnUzOEAUjnzgkYbzpQKR3nJ2Hv1A?usp=sharing" target="_blank">Zoon Hlaing</a>
-                    <a type="button" class="btn btn-primary "
-                      href="https://drive.google.com/drive/folders/1WEMyicR6B_gLlVzKWUAlRugvtsjFrIPd?usp=sharing" target="_blank">Hein Min Zaw</a>
-					
-					<a type="button" class="btn btn-primary "
-                      href="https://drive.google.com/drive/folders/1YhfB3_V20pgTPkfz3pxdKyANNKsC5W_L?usp=sharing" target="_blank">Kyaw Electronic-OL</a>
-							  
-                            <h5>5 Month</h5>
-                            <ul class="nav">
-
-                              <li class="nav-item ">
-                               <a type="button" class="btn btn-primary "
-                      href="https://drive.google.com/drive/folders/1UioDitAA30EgbSMtwVM_Hkf21xWQW81Q?usp=sharing" target="_blank">PMA</a>
-                    
-                    <a type="button" class="btn btn-primary "
-                      href="https://drive.google.com/drive/folders/1IqnRmxyBUTnWkO2SaD6tdw0kPQuaMXY1?usp=sharing" target="_blank">Dakena</a>
-                    
-					<a type="button" class="btn btn-primary "
-                      href="https://drive.google.com/drive/folders/1MgN6yICX-96RUc5IxjbosBppydW2L7se?usp=sharing" target="_blank">Lalway</a>
-                    <a type="button" class="btn btn-primary "
-                      href="https://drive.google.com/drive/folders/1dWRsFH48crBrUW5gxB6rCuM3QCSsEwQX?usp=sharing" target="_blank">Store House PMA</a>
-                    <a type="button" class="btn btn-primary "
-                      href="https://drive.google.com/drive/folders/1PCCvkgtfMtDQLeos1Ajf1fsF6UtsSuau?usp=sharing" target="_blank">Store House Dakena</a>
-                    
-					
-                    <a type="button" class="btn btn-primary "
-                      href="https://drive.google.com/drive/folders/1OJO3bEzJ9q5JW1iGurPMAqQYjoa_LAKd?usp=sharing" target="_blank">Zoon Hlaing</a>
-                    <a type="button" class="btn btn-primary "
-                      href="https://drive.google.com/drive/folders/1EmIfMXliAY_cejkdCX6rJQruMkorNvbW?usp=sharing" target="_blank">Hein Min Zaw</a>
-					
-					<a type="button" class="btn btn-primary "
-                      href="https://drive.google.com/drive/folders/1oJ4v0uAYaa3-PQdgBM_Kh1fcecmdxD_Z?usp=sharing" target="_blank">Kyaw Electronic-OL</a>  
-
-                                <h5>6 Month</h5>
-                                <ul class="nav">
-
-                                  <li class="nav-item ">
-                                  
-                    
-                    <a type="button" class="btn btn-primary "
-                      href="https://drive.google.com/drive/folders/1qKzf5PNy6ux3OQmqsfjNwOU-QIQmLUld?usp=sharing" target="_blank">Dakena</a>
-                    
-					<a type="button" class="btn btn-primary "
-                      href="https://drive.google.com/drive/folders/1WrI0XfEMa_6Wbw7lrH16pEZyoOWJl4An?usp=sharing" target="_blank">Lalway</a>
-                    
-                    <a type="button" class="btn btn-primary "
-                      href="https://drive.google.com/drive/folders/1MhXlHvPyHJL4lT5amJyuUxSspfU8U6tW?usp=sharing" target="_blank">Store House Dakena</a>
-                    
-					
-                    <a type="button" class="btn btn-primary "
-                      href="https://drive.google.com/drive/folders/1lge2GU1wDB-nBEMHLZ5LqYlH2b_9bnLQ?usp=sharing" target="_blank">Zoon Hlaing</a>
-                    <a type="button" class="btn btn-primary "
-                      href="https://drive.google.com/drive/folders/15qW8HcLZ-5-kYXVdCl5TVG8JSR1lfVrf?usp=sharing" target="_blank">Hein Min Zaw</a>
-					
-					<a type="button" class="btn btn-primary "
-                      href="https://drive.google.com/drive/folders/1b4t_RXCXVP7OmDhbxi27Pqxi2hi10gM1?usp=sharing" target="_blank">Kyaw Electronic-OL</a>
-                                    
-
-                                    <h5>7 Month</h5>
-                                    <ul class="nav">
-
-                                      <li class="nav-item ">
-                                         <a type="button" class="btn btn-primary "
-                      href="https://drive.google.com/drive/folders/1XohTqtDOAFI4ByQW_ctZX9KPQE5_h_4F?usp=sharing" target="_blank">Dakena</a>
-                    
-					<a type="button" class="btn btn-primary "
-                      href="https://drive.google.com/drive/folders/1Wm9I2mhgO7F3ByuH9lOak9Gu46shMn5q?usp=sharing" target="_blank">Lalway</a>
-                    
-                    <a type="button" class="btn btn-primary "
-                      href="https://drive.google.com/drive/folders/1H-WHtuAdF-XDiNLnEQ8hv95zcS8nfnOl?usp=sharing" target="_blank">Store House Dakena</a>
-                    
-					
-                    <a type="button" class="btn btn-primary "
-                      href="https://drive.google.com/drive/folders/1CKP-syPIRQLBDrmMkLDlH8p38aXOpTUy?usp=sharing" target="_blank">Zoon Hlaing</a>
-                    <a type="button" class="btn btn-primary "
-                      href="https://drive.google.com/drive/folders/1vBjqhL31oBsbVhDmjlU4LFvcAoqhE4zc?usp=sharing" target="_blank">Hein Min Zaw</a>
-					
-					<a type="button" class="btn btn-primary "
-                      href="https://drive.google.com/drive/folders/1UwjIA82uLqhxq4Jy-TWI26iFf-BYAhwm?usp=sharing" target="_blank">Kyaw Electronic-OL</a>
-                                    
-					  
-                                        <h5>8 Month</h5>
-                                        <ul class="nav">
-
-                                          <li class="nav-item ">
-                                       <a type="button" class="btn btn-primary "
-                      href="https://drive.google.com/drive/folders/1ojDi33cdOCNwYBtGHL_2VzVUYr2x4grk?usp=sharing" target="_blank">Dakena</a>
-                    
-					<a type="button" class="btn btn-primary "
-                      href="https://drive.google.com/drive/folders/1APMg_pQEx0SR6I_rwDWpQ17_vige0yny?usp=sharing" target="_blank">Lalway</a>
-                    
-                    <a type="button" class="btn btn-primary "
-                      href="https://drive.google.com/drive/folders/1U1XYKHpEaueRd7RWBqXFpk2im4lkZm5-?usp=sharing" target="_blank">Store House Dakena</a>
-                    
-					
-                    <a type="button" class="btn btn-primary "
-                      href="https://drive.google.com/drive/folders/1yU78vH6MTmqsPnBQEvYamPMwdww0m5SV?usp=sharing" target="_blank">Zoon Hlaing</a>
-                    <a type="button" class="btn btn-primary "
-                      href="https://drive.google.com/drive/folders/1jBlXdwxE5sF_nVoNo-bWxuDJ0Z26VU5J?usp=sharing" target="_blank">Hein Min Zaw</a>
-					
-					<a type="button" class="btn btn-primary "
-                      href="https://drive.google.com/drive/folders/1wMr8OFbyzxklKhxoL6J1DkfxVFVnPb7R?usp=sharing" target="_blank">Kyaw Electronic-OL</a>
-
-
-                                            <h5>9 Month</h5>
-                                            <ul class="nav">
-
-                                              
-                                          <li class="nav-item ">
-                                        <a type="button" class="btn btn-primary "
-                      href="https://drive.google.com/drive/folders/1X_rglO5vypXN8KrVDXCZjH-RBzDxIrJo?usp=sharing" target="_blank">Dakena</a>
-                    
-					<a type="button" class="btn btn-primary "
-                      href="https://drive.google.com/drive/folders/1jQSf4eiXdFaX8NwK44L93gyMXPE7wQuy?usp=sharing" target="_blank">Lalway</a>
-					  
-                    <a type="button" class="btn btn-primary "
-                      href="https://drive.google.com/drive/folders/1ZxwQu0DGgdYShwRCFFcJ4OrtIFhgZOIT?usp=sharing" target="_blank">Kyaw Phyo Win</a>
-					  
-                    <a type="button" class="btn btn-primary "
-                      href="https://drive.google.com/drive/folders/1HPleVw8AFYeCf4rQ4hSg9y6mzNGu7__f?usp=sharing" target="_blank">Store House Dakena</a>
-                    
-					
-                    <a type="button" class="btn btn-primary "
-                      href="https://drive.google.com/drive/folders/1qTQpqVQNL7YDvuUTAxtMGOSaJ6eRHgJK?usp=sharing" target="_blank">Zoon Hlaing</a>
-                    <a type="button" class="btn btn-primary "
-                      href="https://drive.google.com/drive/folders/1qls0oxysnBMJ-v3IFtgOM4aEPx91V9Wx?usp=sharing" target="_blank">Hein Min Zaw</a>
-					
-					<a type="button" class="btn btn-primary "
-                      href="https://drive.google.com/drive/folders/1U6o4hSLt2YT6YvUbBADX9c7U_usvt-00?usp=sharing" target="_blank">Kyaw Electronic-OL</a>
-                                                
-												<h5>10 Month</h5>
-                                                <ul class="nav">
-
-                                                   <li class="nav-item ">
-                                         <a type="button" class="btn btn-primary "
-                      href="https://drive.google.com/drive/folders/1LLG6qvAI29NYKG26O_OcbmREObRHb-bp?usp=sharing" target="_blank">Dakena</a>
-                    
-					<a type="button" class="btn btn-primary "
-                      href="https://drive.google.com/drive/folders/1Q_PyjAmtHKnNoH2vHACQ-YYvma6pEKqR?usp=sharing" target="_blank">Lalway</a>
-					  
-                    <a type="button" class="btn btn-primary "
-                      href="https://drive.google.com/drive/folders/1wzqV9J2YKsPv6dHEKTgqxT384DeK--GF?usp=sharing" target="_blank">Kyaw Phyo Win</a>
-					  
-                    <a type="button" class="btn btn-primary "
-                      href="https://drive.google.com/drive/folders/1IBKTF6P-Z_5-XVJx3vQMB5tkD_Hj3Hk3?usp=sharing" target="_blank">Store House Dakena</a>
-                    
-					
-                    <a type="button" class="btn btn-primary "
-                      href="https://drive.google.com/drive/folders/1A-4UxY634h-FkqSKyC38TyK8SViHZJjs?usp=sharing" target="_blank">Zoon Hlaing</a>
-                    <a type="button" class="btn btn-primary "
-                      href="https://drive.google.com/drive/folders/1gRtfcDM-zHaWLaAd0TC3qFlC5Sb6MqhW?usp=sharing" target="_blank">Hein Min Zaw</a>
-					
-					<a type="button" class="btn btn-primary "
-                      href="https://drive.google.com/drive/folders/1W9GVFrcwmw_H0FNRnb4NrshYACPG2bwD?usp=sharing" target="_blank">Kyaw Electronic-OL</a>   
-
-                                                    <h5>11 Month</h5>
-                                                    <ul class="nav">
-
-                                                      <li class="nav-item ">
-                                                      <a type="button" class="btn btn-primary "
-                      href="https://drive.google.com/drive/folders/159Nh-W7TC11Afrd7SHD3rk24feKB4kIt?usp=sharing" target="_blank">Dakena</a>
-                    
-					<a type="button" class="btn btn-primary "
-                      href="https://drive.google.com/drive/folders/1Z2Mca6MhMgIYuhehkHv0oyXzBeWXma4g?usp=sharing" target="_blank">Lalway</a>
-					  
-                    <a type="button" class="btn btn-primary "
-                      href="https://drive.google.com/drive/folders/16EAxRsIHHBBRCtd407HJRsujJgjv-Z8y?usp=sharing" target="_blank">Kyaw Phyo Win</a>
-					  
-                    <a type="button" class="btn btn-primary "
-                      href="https://drive.google.com/drive/folders/1xWAxM7nPDySVJlNW7gw0EVRJQG2Z8wUi?usp=sharing" target="_blank">Store House Dakena</a>
-                    
-					
-                    <a type="button" class="btn btn-primary "
-                      href="https://drive.google.com/drive/folders/1d7jx1nMGYgnvm8mxp8wFf4HZTg607Re8?usp=sharing" target="_blank">Zoon Hlaing</a>
-                    <a type="button" class="btn btn-primary "
-                      href="https://drive.google.com/drive/folders/1xESt6Lhgo31Fru2lXGqj_NQ3PmVzS_Bp?usp=sharing" target="_blank">Hein Min Zaw</a>
-					
-					<a type="button" class="btn btn-primary "
-                      href="https://drive.google.com/drive/folders/1Uq1HtOQm-UhFd9wkFhcToxhbVrMiIiPc?usp=sharing" target="_blank">Kyaw Electronic-OL</a>
-                                                            
-                                                            <h5>12 Month</h5>
-                                                            <ul class="nav">
-
-                                                              <li class="nav-item ">
-                                                                <a type="button" class="btn btn-primary "
-                      href="https://drive.google.com/drive/folders/1pOGjKG_IWartZwm5JAT9s5Jn6OZJm6CC?usp=sharing" target="_blank">Dakena</a>
-                    
-					<a type="button" class="btn btn-primary "
-                      href="https://drive.google.com/drive/folders/1iavhRGZfYDI-sN19DRjEbCn3kFhbOQ1I?usp=sharing" target="_blank">Lalway</a>
-					  
-                    <a type="button" class="btn btn-primary "
-                      href="https://drive.google.com/drive/folders/17vfoexWC9A0fdLj3aEQpWmBybWSbj8zc?usp=sharing" target="_blank">Kyaw Phyo Win</a>
-					  
-                    <a type="button" class="btn btn-primary "
-                      href="https://drive.google.com/drive/folders/1qdSsSVNcIa6-pN-IFqDvLZlDRdQOsK8g?usp=sharing" target="_blank">Store House Dakena</a>
-                    
-					
-                    <a type="button" class="btn btn-primary "
-                      href="https://drive.google.com/drive/folders/1bbjEp6dwnMQyqe9OUW4JjO_stnDb3Pt2?usp=sharing" target="_blank">Zoon Hlaing</a>
-                    <a type="button" class="btn btn-primary "
-                      href="https://drive.google.com/drive/folders/1XBmJmWjxKJlERrXBfeZqGZWEoafIT2zP?usp=sharing" target="_blank">Hein Min Zaw</a>
-					
-					<a type="button" class="btn btn-primary "
-                      href="https://drive.google.com/drive/folders/1NjNKYr1kIEAWSuZNC1NiqmgCyuO0Z3zx?usp=sharing" target="_blank">Kyaw Electronic-OL</a>
-																  
-																  
-
-
-
-      </div>
-    </div>
-  </div>
+<header>
+  <a href="index.html"><img src="Thein Logo.jpg" alt="Thein Family"></a>
+  <a class="home" href="index.html">Home</a>
+  <div class="grow"><input id="q" type="search" placeholder="Search links..." aria-label="Search links" autocomplete="off"></div>
+</header>
+<main>
+<section>
+<h2>Daily STB Data Upload</h2>
+<div class="grp">
+<div class="sub">1 Month</div>
+<div class="links">
+<a href="https://drive.google.com/drive/folders/1Y1MVkQgEQS0-1HePOwMgCGeiWu3cz_Gh?usp=sharing" target="_blank" rel="noopener">Dakena</a>
+<a href="https://drive.google.com/drive/folders/1w8tb7hv64tyc5zZUDEZaCE4cKAmqCNkK?usp=sharing" target="_blank" rel="noopener">Lalway</a>
+<a href="hhttps://drive.google.com/drive/folders/1XT9kPz_BFUlqNC3QEXlwjpOFaJVehoNk?usp=sharing">Kyaw Phyo Win</a>
+<a href="https://drive.google.com/drive/folders/1nn5Pt-enTBNOT0bmH2Zgc9t3nWllvVH5?usp=sharing" target="_blank" rel="noopener">Store House Dakena</a>
+<a href="https://drive.google.com/drive/folders/11ypPyUEcxwmq7ODyLbyDXzvaEmxmu82Q?usp=sharing" target="_blank" rel="noopener">Zoon Hlaing</a>
+<a href="https://drive.google.com/drive/folders/1UtRu__EsTEaPaBY8TB9-fxc4dXz6BUUz?usp=sharing" target="_blank" rel="noopener">Hein Min Zaw</a>
+<a href="https://drive.google.com/drive/folders/1GT0vDJbkEoGRe1oM8qPi56xNIX1yvUZG?usp=sharing" target="_blank" rel="noopener">Kyaw Electronic-OL</a>
+</div></div>
+<div class="grp">
+<div class="sub">2 Month</div>
+<div class="links">
+<a href="https://drive.google.com/drive/folders/1wQ98i22IC1X5Jc23QLS_qCHV7O2f7uhm?usp=sharing" target="_blank" rel="noopener">Dakena</a>
+<a href="https://drive.google.com/drive/folders/1e823V-Gv3aivbjJdA0vI7gghBHjvy8BI?usp=sharing" target="_blank" rel="noopener">Lalway</a>
+<a href="https://drive.google.com/drive/folders/1m-kswck_fluf0QXmZH81vYWeCCBcXiN6?usp=sharing" target="_blank" rel="noopener">Kyaw Phyo Win</a>
+<a href="https://drive.google.com/drive/folders/1LijOrS4fAuaexWuQwQI2c_UNNqinyhMN?usp=sharing" target="_blank" rel="noopener">Store House Dakena</a>
+<a href="https://drive.google.com/drive/folders/15nEflxc9Da7fRk-OxWtNxW2RtYBfvYHQ?usp=sharing" target="_blank" rel="noopener">Zoon Hlaing</a>
+<a href="https://drive.google.com/drive/folders/176b88OS9s08wfDXM32KyypMCbPM68KAY?usp=sharing" target="_blank" rel="noopener">Hein Min Zaw</a>
+<a href="https://drive.google.com/drive/folders/1qiPE-ImvYVxSlyVrtWoK4dMuVUgBc1EK?usp=sharing" target="_blank" rel="noopener">Kyaw Electronic-OL</a>
+</div></div>
+<div class="grp">
+<div class="sub">3 Month</div>
+<div class="links">
+<a href="https://drive.google.com/drive/folders/10XX663SWsnh-0bK1P-hjvaDPn2fCFeTs?usp=sharing" target="_blank" rel="noopener">Dakena</a>
+<a href="https://drive.google.com/drive/folders/1AkZZmz0JjMqoQ5JFDPnCT6rixlJHb1HK?usp=sharing" target="_blank" rel="noopener">Lalway</a>
+<a href="https://drive.google.com/drive/folders/1jN8AobpUPUq3QVXZ2OclREwHUSRmgTTn?usp=sharing" target="_blank" rel="noopener">Kyaw Phyo Win</a>
+<a href="https://drive.google.com/drive/folders/1MU5rsFjPLdRUVXlbj-qyceLgpsM1qkgs?usp=sharing" target="_blank" rel="noopener">Store House Dakena</a>
+<a href="https://drive.google.com/drive/folders/1yy6FZGC5OK8jTPA21eU3mdPqkg5dPF-u?usp=sharing" target="_blank" rel="noopener">Hein Min Zaw</a>
+<a href="https://drive.google.com/drive/folders/1rs8k3ac7m_SyQMgSBIR9TT2ch01EdJCb?usp=sharing" target="_blank" rel="noopener">Kyaw Electronic-OL</a>
+</div></div>
+<div class="grp">
+<div class="sub">4 Month</div>
+<div class="links">
+<a href="https://drive.google.com/drive/folders/1YmeAMrq89DzrM2FmVcMnYwkWvnuVNjzE?usp=sharing" target="_blank" rel="noopener">PMA</a>
+<a href="https://drive.google.com/drive/folders/1OnbCKFZYgLquMW-gOoVzmUEW2hNT1ekR?usp=sharing" target="_blank" rel="noopener">Dakena</a>
+<a href="https://drive.google.com/drive/folders/1sFHSgQkLHu5P_Ej1rpJB4mi9VafwuYhF?usp=sharing" target="_blank" rel="noopener">Lalway</a>
+<a href="https://drive.google.com/drive/folders/1ihRhmodLexOyRMGCqCQh0sf5_WTWYyMx?usp=sharing" target="_blank" rel="noopener">Store House PMA</a>
+<a href="https://drive.google.com/drive/folders/1jOoaFIb7kYH1QDv9LzWt4kDHU-k59_NN?usp=sharing" target="_blank" rel="noopener">Store House Dakena</a>
+<a href="https://drive.google.com/drive/folders/1-MKxqnUzOEAUjnzgkYbzpQKR3nJ2Hv1A?usp=sharing" target="_blank" rel="noopener">Zoon Hlaing</a>
+<a href="https://drive.google.com/drive/folders/1WEMyicR6B_gLlVzKWUAlRugvtsjFrIPd?usp=sharing" target="_blank" rel="noopener">Hein Min Zaw</a>
+<a href="https://drive.google.com/drive/folders/1YhfB3_V20pgTPkfz3pxdKyANNKsC5W_L?usp=sharing" target="_blank" rel="noopener">Kyaw Electronic-OL</a>
+</div></div>
+<div class="grp">
+<div class="sub">5 Month</div>
+<div class="links">
+<a href="https://drive.google.com/drive/folders/1UioDitAA30EgbSMtwVM_Hkf21xWQW81Q?usp=sharing" target="_blank" rel="noopener">PMA</a>
+<a href="https://drive.google.com/drive/folders/1IqnRmxyBUTnWkO2SaD6tdw0kPQuaMXY1?usp=sharing" target="_blank" rel="noopener">Dakena</a>
+<a href="https://drive.google.com/drive/folders/1MgN6yICX-96RUc5IxjbosBppydW2L7se?usp=sharing" target="_blank" rel="noopener">Lalway</a>
+<a href="https://drive.google.com/drive/folders/1dWRsFH48crBrUW5gxB6rCuM3QCSsEwQX?usp=sharing" target="_blank" rel="noopener">Store House PMA</a>
+<a href="https://drive.google.com/drive/folders/1PCCvkgtfMtDQLeos1Ajf1fsF6UtsSuau?usp=sharing" target="_blank" rel="noopener">Store House Dakena</a>
+<a href="https://drive.google.com/drive/folders/1OJO3bEzJ9q5JW1iGurPMAqQYjoa_LAKd?usp=sharing" target="_blank" rel="noopener">Zoon Hlaing</a>
+<a href="https://drive.google.com/drive/folders/1EmIfMXliAY_cejkdCX6rJQruMkorNvbW?usp=sharing" target="_blank" rel="noopener">Hein Min Zaw</a>
+<a href="https://drive.google.com/drive/folders/1oJ4v0uAYaa3-PQdgBM_Kh1fcecmdxD_Z?usp=sharing" target="_blank" rel="noopener">Kyaw Electronic-OL</a>
+</div></div>
+<div class="grp">
+<div class="sub">6 Month</div>
+<div class="links">
+<a href="https://drive.google.com/drive/folders/1qKzf5PNy6ux3OQmqsfjNwOU-QIQmLUld?usp=sharing" target="_blank" rel="noopener">Dakena</a>
+<a href="https://drive.google.com/drive/folders/1WrI0XfEMa_6Wbw7lrH16pEZyoOWJl4An?usp=sharing" target="_blank" rel="noopener">Lalway</a>
+<a href="https://drive.google.com/drive/folders/1MhXlHvPyHJL4lT5amJyuUxSspfU8U6tW?usp=sharing" target="_blank" rel="noopener">Store House Dakena</a>
+<a href="https://drive.google.com/drive/folders/1lge2GU1wDB-nBEMHLZ5LqYlH2b_9bnLQ?usp=sharing" target="_blank" rel="noopener">Zoon Hlaing</a>
+<a href="https://drive.google.com/drive/folders/15qW8HcLZ-5-kYXVdCl5TVG8JSR1lfVrf?usp=sharing" target="_blank" rel="noopener">Hein Min Zaw</a>
+<a href="https://drive.google.com/drive/folders/1b4t_RXCXVP7OmDhbxi27Pqxi2hi10gM1?usp=sharing" target="_blank" rel="noopener">Kyaw Electronic-OL</a>
+</div></div>
+<div class="grp">
+<div class="sub">7 Month</div>
+<div class="links">
+<a href="https://drive.google.com/drive/folders/1XohTqtDOAFI4ByQW_ctZX9KPQE5_h_4F?usp=sharing" target="_blank" rel="noopener">Dakena</a>
+<a href="https://drive.google.com/drive/folders/1Wm9I2mhgO7F3ByuH9lOak9Gu46shMn5q?usp=sharing" target="_blank" rel="noopener">Lalway</a>
+<a href="https://drive.google.com/drive/folders/1H-WHtuAdF-XDiNLnEQ8hv95zcS8nfnOl?usp=sharing" target="_blank" rel="noopener">Store House Dakena</a>
+<a href="https://drive.google.com/drive/folders/1CKP-syPIRQLBDrmMkLDlH8p38aXOpTUy?usp=sharing" target="_blank" rel="noopener">Zoon Hlaing</a>
+<a href="https://drive.google.com/drive/folders/1vBjqhL31oBsbVhDmjlU4LFvcAoqhE4zc?usp=sharing" target="_blank" rel="noopener">Hein Min Zaw</a>
+<a href="https://drive.google.com/drive/folders/1UwjIA82uLqhxq4Jy-TWI26iFf-BYAhwm?usp=sharing" target="_blank" rel="noopener">Kyaw Electronic-OL</a>
+</div></div>
+<div class="grp">
+<div class="sub">8 Month</div>
+<div class="links">
+<a href="https://drive.google.com/drive/folders/1ojDi33cdOCNwYBtGHL_2VzVUYr2x4grk?usp=sharing" target="_blank" rel="noopener">Dakena</a>
+<a href="https://drive.google.com/drive/folders/1APMg_pQEx0SR6I_rwDWpQ17_vige0yny?usp=sharing" target="_blank" rel="noopener">Lalway</a>
+<a href="https://drive.google.com/drive/folders/1U1XYKHpEaueRd7RWBqXFpk2im4lkZm5-?usp=sharing" target="_blank" rel="noopener">Store House Dakena</a>
+<a href="https://drive.google.com/drive/folders/1yU78vH6MTmqsPnBQEvYamPMwdww0m5SV?usp=sharing" target="_blank" rel="noopener">Zoon Hlaing</a>
+<a href="https://drive.google.com/drive/folders/1jBlXdwxE5sF_nVoNo-bWxuDJ0Z26VU5J?usp=sharing" target="_blank" rel="noopener">Hein Min Zaw</a>
+<a href="https://drive.google.com/drive/folders/1wMr8OFbyzxklKhxoL6J1DkfxVFVnPb7R?usp=sharing" target="_blank" rel="noopener">Kyaw Electronic-OL</a>
+</div></div>
+<div class="grp">
+<div class="sub">9 Month</div>
+<div class="links">
+<a href="https://drive.google.com/drive/folders/1X_rglO5vypXN8KrVDXCZjH-RBzDxIrJo?usp=sharing" target="_blank" rel="noopener">Dakena</a>
+<a href="https://drive.google.com/drive/folders/1jQSf4eiXdFaX8NwK44L93gyMXPE7wQuy?usp=sharing" target="_blank" rel="noopener">Lalway</a>
+<a href="https://drive.google.com/drive/folders/1ZxwQu0DGgdYShwRCFFcJ4OrtIFhgZOIT?usp=sharing" target="_blank" rel="noopener">Kyaw Phyo Win</a>
+<a href="https://drive.google.com/drive/folders/1HPleVw8AFYeCf4rQ4hSg9y6mzNGu7__f?usp=sharing" target="_blank" rel="noopener">Store House Dakena</a>
+<a href="https://drive.google.com/drive/folders/1qTQpqVQNL7YDvuUTAxtMGOSaJ6eRHgJK?usp=sharing" target="_blank" rel="noopener">Zoon Hlaing</a>
+<a href="https://drive.google.com/drive/folders/1qls0oxysnBMJ-v3IFtgOM4aEPx91V9Wx?usp=sharing" target="_blank" rel="noopener">Hein Min Zaw</a>
+<a href="https://drive.google.com/drive/folders/1U6o4hSLt2YT6YvUbBADX9c7U_usvt-00?usp=sharing" target="_blank" rel="noopener">Kyaw Electronic-OL</a>
+</div></div>
+<div class="grp">
+<div class="sub">10 Month</div>
+<div class="links">
+<a href="https://drive.google.com/drive/folders/1LLG6qvAI29NYKG26O_OcbmREObRHb-bp?usp=sharing" target="_blank" rel="noopener">Dakena</a>
+<a href="https://drive.google.com/drive/folders/1Q_PyjAmtHKnNoH2vHACQ-YYvma6pEKqR?usp=sharing" target="_blank" rel="noopener">Lalway</a>
+<a href="https://drive.google.com/drive/folders/1wzqV9J2YKsPv6dHEKTgqxT384DeK--GF?usp=sharing" target="_blank" rel="noopener">Kyaw Phyo Win</a>
+<a href="https://drive.google.com/drive/folders/1IBKTF6P-Z_5-XVJx3vQMB5tkD_Hj3Hk3?usp=sharing" target="_blank" rel="noopener">Store House Dakena</a>
+<a href="https://drive.google.com/drive/folders/1A-4UxY634h-FkqSKyC38TyK8SViHZJjs?usp=sharing" target="_blank" rel="noopener">Zoon Hlaing</a>
+<a href="https://drive.google.com/drive/folders/1gRtfcDM-zHaWLaAd0TC3qFlC5Sb6MqhW?usp=sharing" target="_blank" rel="noopener">Hein Min Zaw</a>
+<a href="https://drive.google.com/drive/folders/1W9GVFrcwmw_H0FNRnb4NrshYACPG2bwD?usp=sharing" target="_blank" rel="noopener">Kyaw Electronic-OL</a>
+</div></div>
+<div class="grp">
+<div class="sub">11 Month</div>
+<div class="links">
+<a href="https://drive.google.com/drive/folders/159Nh-W7TC11Afrd7SHD3rk24feKB4kIt?usp=sharing" target="_blank" rel="noopener">Dakena</a>
+<a href="https://drive.google.com/drive/folders/1Z2Mca6MhMgIYuhehkHv0oyXzBeWXma4g?usp=sharing" target="_blank" rel="noopener">Lalway</a>
+<a href="https://drive.google.com/drive/folders/16EAxRsIHHBBRCtd407HJRsujJgjv-Z8y?usp=sharing" target="_blank" rel="noopener">Kyaw Phyo Win</a>
+<a href="https://drive.google.com/drive/folders/1xWAxM7nPDySVJlNW7gw0EVRJQG2Z8wUi?usp=sharing" target="_blank" rel="noopener">Store House Dakena</a>
+<a href="https://drive.google.com/drive/folders/1d7jx1nMGYgnvm8mxp8wFf4HZTg607Re8?usp=sharing" target="_blank" rel="noopener">Zoon Hlaing</a>
+<a href="https://drive.google.com/drive/folders/1xESt6Lhgo31Fru2lXGqj_NQ3PmVzS_Bp?usp=sharing" target="_blank" rel="noopener">Hein Min Zaw</a>
+<a href="https://drive.google.com/drive/folders/1Uq1HtOQm-UhFd9wkFhcToxhbVrMiIiPc?usp=sharing" target="_blank" rel="noopener">Kyaw Electronic-OL</a>
+</div></div>
+<div class="grp">
+<div class="sub">12 Month</div>
+<div class="links">
+<a href="https://drive.google.com/drive/folders/1pOGjKG_IWartZwm5JAT9s5Jn6OZJm6CC?usp=sharing" target="_blank" rel="noopener">Dakena</a>
+<a href="https://drive.google.com/drive/folders/1iavhRGZfYDI-sN19DRjEbCn3kFhbOQ1I?usp=sharing" target="_blank" rel="noopener">Lalway</a>
+<a href="https://drive.google.com/drive/folders/17vfoexWC9A0fdLj3aEQpWmBybWSbj8zc?usp=sharing" target="_blank" rel="noopener">Kyaw Phyo Win</a>
+<a href="https://drive.google.com/drive/folders/1qdSsSVNcIa6-pN-IFqDvLZlDRdQOsK8g?usp=sharing" target="_blank" rel="noopener">Store House Dakena</a>
+<a href="https://drive.google.com/drive/folders/1bbjEp6dwnMQyqe9OUW4JjO_stnDb3Pt2?usp=sharing" target="_blank" rel="noopener">Zoon Hlaing</a>
+<a href="https://drive.google.com/drive/folders/1XBmJmWjxKJlERrXBfeZqGZWEoafIT2zP?usp=sharing" target="_blank" rel="noopener">Hein Min Zaw</a>
+<a href="https://drive.google.com/drive/folders/1NjNKYr1kIEAWSuZNC1NiqmgCyuO0Z3zx?usp=sharing" target="_blank" rel="noopener">Kyaw Electronic-OL</a>
+</div></div>
+</section>
+<p id="empty">No links match your search.</p>
+</main>
+<script>
+document.getElementById("q").addEventListener("input",function(){
+  var q=this.value.trim().toLowerCase(),shown=0;
+  document.querySelectorAll("main section").forEach(function(sec){
+    var th=(sec.querySelector("h2")||{textContent:""}).textContent.toLowerCase().indexOf(q)>-1,any=false;
+    sec.querySelectorAll(".grp").forEach(function(g){
+      var gany=false;
+      g.querySelectorAll(".links a").forEach(function(a){
+        var hit=!q||th||a.textContent.toLowerCase().indexOf(q)>-1;
+        a.style.display=hit?"":"none";if(hit)gany=true;
+      });
+      g.style.display=gany?"":"none";if(gany)any=true;
+    });
+    sec.style.display=any?"":"none";if(any)shown++;
+  });
+  document.getElementById("empty").style.display=shown?"none":"block";
+});
+</script>
 </body>
-
 </html>

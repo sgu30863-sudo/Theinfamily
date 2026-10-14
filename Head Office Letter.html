@@ -1,47 +1,95 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="my">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Thein Family</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Head Office Form - Thein Family</title>
+<style>
+:root{--bg:#f4f6f3;--card:#fff;--ink:#17251d;--mute:#5d6b63;--line:#d9e0da;--brand:#1d5b3a;--brand-ink:#fff;--chip:#e8f0ea;--chip-h:#d3e5d8;--cust:#b3261e;--cust-bg:#fbeceb;--cust-h:#f5d4d1}
+@media(prefers-color-scheme:dark){:root{--bg:#0f1713;--card:#17231c;--ink:#e6efe9;--mute:#98a89e;--line:#2a3a31;--brand:#164a2f;--chip:#22352a;--chip-h:#2d4637;--cust:#ff9a92;--cust-bg:#3a1f1d;--cust-h:#4d2927}}
+*{box-sizing:border-box}
+html{scroll-padding-top:5rem}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.5 "Noto Sans Myanmar","Myanmar Text","Padauk",system-ui,-apple-system,"Segoe UI",sans-serif}
+header{background:var(--brand);color:var(--brand-ink);padding:.75rem 1rem;position:sticky;top:0;z-index:10;display:flex;flex-wrap:wrap;align-items:center;gap:.75rem 1rem}
+header img{height:44px;width:auto;border-radius:4px;display:block}
+.tools{display:flex;gap:.5rem;align-items:center}
+.grow{flex:1;min-width:200px}
+#q{width:100%;padding:.55rem .8rem;border:0;border-radius:8px;font:inherit;background:#fff;color:#17251d}
+main{max-width:1100px;margin:0 auto;padding:1rem}
+section{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:.9rem 1rem 1rem;margin-bottom:.9rem}
+section.cust{border-color:var(--cust)}
+h2{margin:0 0 .6rem;font-size:1.05rem;font-weight:600}
+section.cust h2{color:var(--cust)}
+.links{display:flex;flex-wrap:wrap;gap:.45rem}
+.links a{display:inline-block;padding:.4rem .75rem;border-radius:8px;background:var(--chip);color:var(--ink);text-decoration:none;font-size:.95rem}
+.links a:hover{background:var(--chip-h)}
+section.cust .links a{background:var(--cust-bg);color:var(--cust)}
+section.cust .links a:hover{background:var(--cust-h)}
+a:focus-visible,button:focus-visible,input:focus-visible{outline:3px solid #f2b705;outline-offset:2px}
+.copy-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:.6rem}
+.copy-item label{display:block;font-size:.85rem;color:var(--mute);margin-bottom:.2rem}
+.copy-row{display:flex;gap:.35rem}
+.copy-row input{flex:1;min-width:0;padding:.4rem .5rem;border:1px solid var(--line);border-radius:6px;background:var(--bg);color:var(--ink);font:.85rem ui-monospace,Consolas,monospace}
+.copy-row button{padding:.4rem .8rem;border:0;border-radius:6px;background:var(--brand);color:#fff;font:inherit;font-size:.9rem;cursor:pointer;min-width:4.6rem}
+.copy-row button.done{background:#2e7d32}
+#empty{display:none;text-align:center;color:var(--mute);padding:2rem 0}
+@media(max-width:520px){main{padding:.6rem}header img{height:38px}}
+.home{color:#fff;text-decoration:none;padding:.4rem .8rem;border-radius:8px;background:rgba(255,255,255,.18);font-size:.95rem}
+.home:hover{background:rgba(255,255,255,.3)}
+.sub{margin:.8rem 0 .4rem;font-size:.9rem;font-weight:600;color:var(--mute)}
+.grp:first-of-type .sub{margin-top:.1rem}
+</style>
 </head>
-
 <body>
-  <div class="container-fluid">
-  <div class="p-2 mb-2 bg-success text-white">
-    <div class="container-fluid">
-      <a href="index.html"><img src="Thein Logo.jpg" b  width="180" height="50"></a>
-         <h3>Head Office Form</h3>
-              <ul class="nav ">
-                <li class="nav-item "> 
-                <a type="button" class="btn btn-primary " href="https://docs.google.com/spreadsheets/d/1gOFWXqiMWMXnwAaslPcoDjloctV0DjLnhCCuoc99HD8/edit?usp=sharing" target="_blank" >Aera Change</a>
-				<a type="button" class="btn btn-primary " href="https://docs.google.com/spreadsheets/d/1_EYfL7hURCXHnmnGqwHmm7UDmH2oewTK1v3iPV12jvk/edit?usp=sharing" target="_blank" >Change STB only</a>
-				<a type="button" class="btn btn-primary " href="https://docs.google.com/spreadsheets/d/1S1_aAwB4xXJ34nNI5xymdl1XkVkWtqAszVYvNbYdlLg/edit?usp=sharing" target="_blank" >Deposit More Error CRM</a>
-				<a type="button" class="btn btn-primary " href="https://docs.google.com/spreadsheets/d/1pLUYLgrfMl9mUQzLe_pv_Z3ZsW5M6_yjbk5FAjJvHZU/edit?usp=sharing" target="_blank" >Damage STB</a>
-		<h3>Head Office Form Data Upload</h3>
-              <ul class="nav ">
-                <li class="nav-item "> 
-                <a type="button" class="btn btn-primary " href="https://drive.google.com/drive/folders/1VZyqfrDao84hrIjrl1hPJhBG1DZIRqv6?usp=sharing" target="_blank" >PMA</a>
-				
-				<a type="button" class="btn btn-primary " href="https://drive.google.com/drive/folders/1pWwYDJd0-GQVygFpi5hyk-O-aZu5UZlT?usp=sharing" target="_blank" >Dakena</a>
-				
-				<a type="button" class="btn btn-primary " href="https://drive.google.com/drive/folders/18EGtL2ASDqgz_UCvWoqAcTJupZ0SNmfH?usp=sharing" target="_blank" >Lalway</a>
-				<a type="button" class="btn btn-primary " href="https://drive.google.com/drive/folders/1Ssmeg2-yzUlYP7poGRFB7T-yhmkInEQN?usp=sharing" target="_blank" >Taungoo</a>
-				<a type="button" class="btn btn-primary " href="https://drive.google.com/drive/folders/1iAiU6Rj36tuT5yuTLw7_s8oFWwYQBWys?usp=sharing" target="_blank" >Shop Online</a>
-				<a type="button" class="btn btn-primary " href="https://drive.google.com/drive/folders/1jmAG9tKHxzH7FBdn3V334MjkVEwD15X_?usp=sharing" target="_blank" >Zoon Hlaing</a>
-				
-				<a type="button" class="btn btn-primary " href="https://drive.google.com/drive/folders/12gINMpd7s6YTT2_0ZLWHPUfurTYbshWd?usp=sharing target="_blank" >Htantapin ဦးကောက်</a>
-				<a type="button" class="btn btn-primary " href="https://drive.google.com/drive/folders/1ReEnjFx9_ylFpy6mjK9VFNGqp_55YJYO?usp=sharing" target="_blank" >Myat Noe Eain</a>
-				
-                     
-      </div>
-      </div>
-</div>
-
+<header>
+  <a href="index.html"><img src="Thein Logo.jpg" alt="Thein Family"></a>
+  <a class="home" href="index.html">Home</a>
+  <div class="grow"><input id="q" type="search" placeholder="Search links..." aria-label="Search links" autocomplete="off"></div>
+</header>
+<main>
+<section>
+<h2>Head Office Form</h2>
+<div class="grp">
+<div class="links">
+<a href="https://docs.google.com/spreadsheets/d/1gOFWXqiMWMXnwAaslPcoDjloctV0DjLnhCCuoc99HD8/edit?usp=sharing" target="_blank" rel="noopener">Area Change</a>
+<a href="https://docs.google.com/spreadsheets/d/1_EYfL7hURCXHnmnGqwHmm7UDmH2oewTK1v3iPV12jvk/edit?usp=sharing" target="_blank" rel="noopener">Change STB only</a>
+<a href="https://docs.google.com/spreadsheets/d/1S1_aAwB4xXJ34nNI5xymdl1XkVkWtqAszVYvNbYdlLg/edit?usp=sharing" target="_blank" rel="noopener">Deposit More Error CRM</a>
+<a href="https://docs.google.com/spreadsheets/d/1pLUYLgrfMl9mUQzLe_pv_Z3ZsW5M6_yjbk5FAjJvHZU/edit?usp=sharing" target="_blank" rel="noopener">Damage STB</a>
+</div></div>
+</section>
+<section>
+<h2>Head Office Form Data Upload</h2>
+<div class="grp">
+<div class="links">
+<a href="https://drive.google.com/drive/folders/1VZyqfrDao84hrIjrl1hPJhBG1DZIRqv6?usp=sharing" target="_blank" rel="noopener">PMA</a>
+<a href="https://drive.google.com/drive/folders/1pWwYDJd0-GQVygFpi5hyk-O-aZu5UZlT?usp=sharing" target="_blank" rel="noopener">Dakena</a>
+<a href="https://drive.google.com/drive/folders/18EGtL2ASDqgz_UCvWoqAcTJupZ0SNmfH?usp=sharing" target="_blank" rel="noopener">Lalway</a>
+<a href="https://drive.google.com/drive/folders/1Ssmeg2-yzUlYP7poGRFB7T-yhmkInEQN?usp=sharing" target="_blank" rel="noopener">Taungoo</a>
+<a href="https://drive.google.com/drive/folders/1iAiU6Rj36tuT5yuTLw7_s8oFWwYQBWys?usp=sharing" target="_blank" rel="noopener">Shop Online</a>
+<a href="https://drive.google.com/drive/folders/1jmAG9tKHxzH7FBdn3V334MjkVEwD15X_?usp=sharing" target="_blank" rel="noopener">Zoon Hlaing</a>
+<a href="https://drive.google.com/drive/folders/12gINMpd7s6YTT2_0ZLWHPUfurTYbshWd?usp=sharing" target="_blank" rel="noopener">Htantapin ဦးကောက်</a>
+<a href="https://drive.google.com/drive/folders/1ReEnjFx9_ylFpy6mjK9VFNGqp_55YJYO?usp=sharing" target="_blank" rel="noopener">Myat Noe Eain</a>
+</div></div>
+</section>
+<p id="empty">No links match your search.</p>
+</main>
+<script>
+document.getElementById("q").addEventListener("input",function(){
+  var q=this.value.trim().toLowerCase(),shown=0;
+  document.querySelectorAll("main section").forEach(function(sec){
+    var th=(sec.querySelector("h2")||{textContent:""}).textContent.toLowerCase().indexOf(q)>-1,any=false;
+    sec.querySelectorAll(".grp").forEach(function(g){
+      var gany=false;
+      g.querySelectorAll(".links a").forEach(function(a){
+        var hit=!q||th||a.textContent.toLowerCase().indexOf(q)>-1;
+        a.style.display=hit?"":"none";if(hit)gany=true;
+      });
+      g.style.display=gany?"":"none";if(gany)any=true;
+    });
+    sec.style.display=any?"":"none";if(any)shown++;
+  });
+  document.getElementById("empty").style.display=shown?"none":"block";
+});
+</script>
 </body>
-
 </html>
